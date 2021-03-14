@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "coc-eslint": ">=1.4.5",
+    "coc-json": ">=1.3.4",
+    "coc-markdownlint": ">=1.11.1",
+    "coc-pairs": ">=1.2.23",
+    "coc-phpls": ">=2.2.0",
+    "coc-prettier": ">=1.1.22",
+    "coc-snippets": ">=2.4.1"
+  }
+}

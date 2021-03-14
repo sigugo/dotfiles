@@ -1,0 +1,82 @@
+---
+wow:
+  directory: /home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft
+  flavor: Retail
+addons:
+  global_release_channel: Stable
+  ignored:
+    Retail:
+      - MythicDungeonTools
+  release_channels:
+    Retail:
+      BigWigs: Stable
+      RUF: Stable
+  delete_saved_variables: false
+theme: ~
+column_config:
+  V3:
+    my_addons_columns:
+      - key: title
+        width: ~
+        hidden: false
+      - key: local
+        width: 150
+        hidden: false
+      - key: remote
+        width: 150
+        hidden: false
+      - key: status
+        width: 85
+        hidden: false
+      - key: channel
+        width: 85
+        hidden: true
+      - key: author
+        width: 85
+        hidden: true
+      - key: game_version
+        width: 110
+        hidden: true
+      - key: date_released
+        width: 110
+        hidden: true
+      - key: source
+        width: 110
+        hidden: true
+    catalog_columns:
+      - key: addon
+        width: 387
+        hidden: false
+      - key: description
+        width: ~
+        hidden: false
+      - key: source
+        width: 85
+        hidden: false
+      - key: num_downloads
+        width: 105
+        hidden: false
+      - key: game_version
+        width: 105
+        hidden: true
+      - key: date_released
+        width: 105
+        hidden: false
+      - key: install
+        width: 85
+        hidden: false
+    aura_columns: []
+window_size:
+  - 1644
+  - 902
+scale: 1.0
+backup_directory: ~
+backup_addons: false
+backup_wtf: false
+hide_ignored_addons: false
+self_update_channel: Stable
+weak_auras_account:
+  Retail: JERUSALEMX
+alternating_row_colors: true
+language: English
+catalog_source: Tukui

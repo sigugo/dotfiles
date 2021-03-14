@@ -1,0 +1,213 @@
+! Mouse
+Xcursor.size: 48
+
+! XFT
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.autohint: false
+Xft.rgba: rgb
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+!behavior
+URxvt.termName: rxvt-unicode-256color
+URxvt.loginShell: true
+URxvt.scrollBar: false
+URxvt.secondaryScroll: true
+URxvt.saveLines: 65535
+URxvt.cursorUnderline: true 
+URxvt.urgentOnBell: true
+URxvt.cursorBlink: false
+URxvt.cutchars: '"'().<>[]{|}
+Urxvt.urlLauncher: /usr/bin/firefox
+
+!extensions
+!URxvt.perl-lib: ~/.config/urxvt/perl
+urxvt.perl-ext-common: resize-font
+
+!keys
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
+
+! look
+URxvt.font: xft:Hack Nerd Font Mono:size=10
+URxvt.boldFont: xft:Hack Nerd Font Mono:size=10:Bold
+! URxvt.font: xft:Anonymice Nerd Font:size=10
+! URxvt.boldFont: xft:Anonymice Nerd Font:size=10:Bold
+URxvt.letterSpace: -2
+URxvt.matcher.button: 1
+URxvt.geometry: 70x35
+URxvt.internalBorder: 1 
+URxvt.inheritPixmap: True
+URxvt.foreground:   #bea492
+URxvt.depth: 32
+! URxvt.background:   rgba:0000/0000/0200/c800   
+URxvt.background:   Black
+URxvt.cursorColor:  #bea492
+URxvt.colorBD:      #bea492
+
+
+! ! black
+! *color0:       #33302e
+! *color8:       #81776f
+! 
+! ! red
+! *color1:       #8c4c4c
+! *color9:       #9f5555
+! 
+! ! green
+! *color2:       #746c48
+! *color10:      #857b52
+! 
+! ! yellow
+! *color3:       #907245
+! *color11:      #9c7e53
+! 
+! ! blue
+! *color4:       #4c626d
+! *color12:      #5b707a
+! 
+! ! magenta
+! *color5:       #604c5f
+! *color13:      #625665
+! 
+! ! cyan
+! *color6:       #4b5e57
+! *color14:      #557067
+! 
+! ! white
+! *color7:       #a69181
+! *color15:      #e8dfcd
+
+
+! ! --- special colors ---
+! 
+! *background: #0d1926
+! *foreground: #d9e6f2
+! 
+! ! --- standard colors ---
+! 
+! ! black
+! *color0: #303030
+! 
+! ! bright_black
+! *color8: #626262
+! 
+! ! red
+! *color1: #a23537
+! 
+! ! bright_red
+! *color9: #d78788
+! 
+! ! green
+! *color2: #37a235
+! 
+! ! bright_green
+! *color10: #88d787
+! 
+! ! yellow
+! *color3: #a2a035
+! 
+! ! bright_yellow
+! *color11: #d7d687
+! 
+! ! blue
+! *color4: #3537a2
+! 
+! ! bright_blue
+! *color12: #8788d7
+! 
+! ! magenta
+! *color5: #a035a2
+! 
+! ! bright_magenta
+! *color13: #d687d7
+! 
+! ! cyan
+! *color6: #35a2a0
+! 
+! ! bright_cyan
+! *color14: #87d7d6
+! 
+! ! white
+! *color7: #9a9a9a
+! 
+! ! bright_white
+! *color15: #ffffff
+!
+!
+
+
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
+
+
+! Common
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+
+! Dark
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background:            S_base03
+
+*background:              S_base03
+*foreground:              S_base0
+*fading:                  40
+*fadeColor:               S_base03
+*cursorColor:             S_base1
+*pointerColorBackground:  S_base01
+*pointerColorForeground:  S_base1
+
+*color0:                  S_base02
+*color1:                  S_red
+*color2:                  S_base03
+*color3:                  S_yellow
+*color4:                  S_blue
+*color5:                  S_magenta
+*color6:                  S_cyan
+*color7:                  S_base2
+*color9:                  S_orange
+*color8:                  S_base03
+*color10:                 S_base01
+*color11:                 S_base00
+*color12:                 S_base0
+*color13:                 S_violet
+*color14:                 S_base1
+*color15:                 S_base3

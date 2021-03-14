@@ -1,0 +1,247 @@
+12:51:12.939 [ajour][INFO] Ajour 0.7.2 has started.
+12:51:12.945 [ajour::gui][DEBUG] config loaded:
+Config {
+    wow: Wow {
+        directory: Some(
+            "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft",
+        ),
+        flavor: Retail,
+    },
+    addons: Addons {
+        global_release_channel: Stable,
+        ignored: {
+            Retail: [
+                "MythicDungeonTools",
+            ],
+        },
+        release_channels: {
+            Retail: {
+                "BigWigs": Stable,
+                "RUF": Stable,
+            },
+        },
+        delete_saved_variables: false,
+    },
+    theme: None,
+    column_config: V3 {
+        my_addons_columns: [
+            ColumnConfigV2 {
+                key: "title",
+                width: None,
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "local",
+                width: Some(
+                    150,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "remote",
+                width: Some(
+                    150,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "status",
+                width: Some(
+                    85,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "channel",
+                width: Some(
+                    85,
+                ),
+                hidden: true,
+            },
+            ColumnConfigV2 {
+                key: "author",
+                width: Some(
+                    85,
+                ),
+                hidden: true,
+            },
+            ColumnConfigV2 {
+                key: "game_version",
+                width: Some(
+                    110,
+                ),
+                hidden: true,
+            },
+            ColumnConfigV2 {
+                key: "date_released",
+                width: Some(
+                    110,
+                ),
+                hidden: true,
+            },
+            ColumnConfigV2 {
+                key: "source",
+                width: Some(
+                    110,
+                ),
+                hidden: true,
+            },
+        ],
+        catalog_columns: [
+            ColumnConfigV2 {
+                key: "addon",
+                width: Some(
+                    387,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "description",
+                width: None,
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "source",
+                width: Some(
+                    85,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "num_downloads",
+                width: Some(
+                    105,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "game_version",
+                width: Some(
+                    105,
+                ),
+                hidden: true,
+            },
+            ColumnConfigV2 {
+                key: "date_released",
+                width: Some(
+                    105,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "install",
+                width: Some(
+                    85,
+                ),
+                hidden: false,
+            },
+        ],
+        aura_columns: [],
+    },
+    window_size: Some(
+        (
+            1644,
+            902,
+        ),
+    ),
+    scale: Some(
+        1.0,
+    ),
+    backup_directory: None,
+    backup_addons: false,
+    backup_wtf: false,
+    hide_ignored_addons: false,
+    self_update_channel: Stable,
+    weak_auras_account: {
+        Retail: "JERUSALEMX",
+    },
+    alternating_row_colors: true,
+    language: English,
+    catalog_source: None,
+}
+12:51:12.946 [ajour::gui][DEBUG] antialiasing: true
+12:51:13.057 [ajour_core::theme][DEBUG] loading user themes
+12:51:13.058 [ajour_core::utility][DEBUG] checking for application update
+12:51:13.059 [ajour_core::fs::theme][DEBUG] loaded 0 user themes
+12:51:13.086 [ajour::gui::update][DEBUG] Message::ThemesLoaded(0 themes)
+12:51:13.087 [ajour::gui::update][DEBUG] Message::CachesLoaded(error: false)
+12:51:13.091 [ajour::gui::update][DEBUG] Message::Parse
+12:51:13.091 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_/Interface/AddOns"
+12:51:13.091 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_ptr_/Interface/AddOns"
+12:51:13.091 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_beta_/Interface/AddOns"
+12:51:13.092 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_classic_/Interface/AddOns"
+12:51:13.092 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_classic_ptr_/Interface/AddOns"
+12:51:13.092 [ajour_core::parse][DEBUG] Retail - parsing addons folder
+12:51:13.092 [ajour_core::parse][DEBUG] Retail PTR - parsing addons folder
+12:51:13.092 [ajour_core::parse][DEBUG] Classic PTR - parsing addons folder
+12:51:13.092 [ajour_core::parse][DEBUG] Retail Beta - parsing addons folder
+12:51:13.092 [ajour_core::parse][DEBUG] Classic - parsing addons folder
+12:51:13.092 [ajour_core::parse][DEBUG] Retail - 123 folders in AddOns directory to parse
+12:51:13.097 [ajour_core::parse][DEBUG] Retail - 123 fingerprints: 123 cached, 0 calculated, 0 added, 0 removed
+12:51:13.124 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Retail PTR, is_installed: false)
+12:51:13.124 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Retail, is_installed: true)
+12:51:13.124 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Retail Beta, is_installed: false)
+12:51:13.124 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Classic, is_installed: false)
+12:51:13.124 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Classic PTR, is_installed: false)
+12:51:13.124 [ajour][ERROR] Failed to parse addons
+12:51:13.124 [ajour][ERROR] caused by: Addon directory not found: "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_ptr_/Interface/AddOns"
+12:51:13.124 [ajour][ERROR] Failed to parse addons
+12:51:13.124 [ajour][ERROR] caused by: Addon directory not found: "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_classic_ptr_/Interface/AddOns"
+12:51:13.124 [ajour][ERROR] Failed to parse addons
+12:51:13.124 [ajour][ERROR] caused by: Addon directory not found: "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_beta_/Interface/AddOns"
+12:51:13.124 [ajour][ERROR] Failed to parse addons
+12:51:13.124 [ajour][ERROR] caused by: Addon directory not found: "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_classic_/Interface/AddOns"
+12:51:13.125 [ajour_core::parse][DEBUG] Retail - 123 addon folders successfully parsed from '.toc'
+12:51:13.125 [ajour_core::parse][DEBUG] Retail - 0 valid cache entries retrieved
+12:51:13.125 [ajour_core::parse][DEBUG] Retail - 123 unique fingerprints to check against curse api
+12:51:13.125 [ajour::gui::update][DEBUG] Message::ListWeakAurasAccounts(Retail, num_accounts: 1)
+12:51:13.228 [ajour::gui::update][DEBUG] Message::LatestRelease(Some("0.7.2"))
+12:51:13.584 [ajour::gui::update][DEBUG] Message::ParsedAuras(Retail, num_auras: 29)
+12:51:13.826 [ajour_core::catalog][DEBUG] Downloaded latest catalog from https://github.com/ajour/ajour-catalog/raw/master/catalog-2.0.json
+12:51:14.140 [ajour::gui::update][DEBUG] Message::CatalogDownloaded(15995 addons in catalog)
+12:51:14.817 [ajour_core::parse][DEBUG] Retail - 66 curse packages fetched
+12:51:14.817 [ajour_core::parse][DEBUG] Retail - 0 tukui packages fetched
+12:51:15.140 [ajour_core::parse][DEBUG] Retail - 22 wowi packages fetched
+12:51:15.140 [ajour_core::parse][DEBUG] Retail - 0 townlong packages fetched
+12:51:15.140 [ajour_core::parse][DEBUG] Retail - 0 git packages fetched
+12:51:15.141 [ajour_core::parse][DEBUG] Retail - 66 addons built from curse packages
+12:51:15.141 [ajour_core::parse][DEBUG] Retail - 0 addons built from tukui packages
+12:51:15.141 [ajour_core::parse][DEBUG] Retail - 0 addons built from wowi packages
+12:51:15.141 [ajour_core::parse][DEBUG] Retail - 0 addons built from townlong-yak packages
+12:51:15.141 [ajour_core::parse][DEBUG] Retail - 0 addons built from git packages
+12:51:15.141 [ajour_core::parse][DEBUG] Retail - 1 unknown addon folders
+12:51:15.141 [ajour_core::parse][DEBUG] Retail - 67 addons successfully parsed
+12:51:15.147 [ajour::gui::update][DEBUG] Message::ParsedAddons(Retail, 67 addons)
+12:51:21.629 [ajour::gui::update][DEBUG] Interaction::ModeSelected(Install)
+12:51:22.083 [ajour::gui::update][DEBUG] Interaction::ModeSelected(MyWeakAuras(Retail))
+12:51:22.515 [ajour::gui::update][DEBUG] Interaction::ModeSelected(Catalog)
+12:51:49.658 [ajour::gui::update][DEBUG] Interaction::CatalogResultSizeSelected(Choice(WowI))
+12:51:56.797 [ajour::gui::update][DEBUG] Interaction::OpenLink(https://www.wowinterface.com/downloads/info18855-TomTomLite.html)
+12:52:09.889 [ajour::gui::update][DEBUG] Interaction::InstallAddon(Retail, Catalog { source: WowI })
+12:52:10.101 [ajour::gui::update][DEBUG] Message::CatalogInstallAddonFetched(Retail, "7032")
+12:52:10.101 [ajour_core::network][DEBUG] downloading remote version v90002-1.2.0 for 4225552363754553456
+12:52:11.559 [ajour::gui::update][DEBUG] Message::DownloadedAddon((Retail, 4225552363754553456, error: false))
+12:52:11.618 [ajour::gui::update][DEBUG] Message::UnpackedAddon((4225552363754553456, error: false))
+12:52:11.619 [ajour_core::parse][DEBUG] Retail - updating fingerprint for TomTom
+12:52:11.619 [ajour::gui::update][DEBUG] Message::AddonCacheUpdated(TomTom)
+12:52:11.664 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, TomTom, error: false))
+13:19:12.416 [ajour::gui::update][DEBUG] Interaction::CatalogResultSizeSelected(Choice(TownlongYak))
+13:19:31.471 [ajour::gui::update][DEBUG] Interaction::InstallAddon(Retail, Catalog { source: TownlongYak })
+13:19:31.779 [ajour::gui::update][DEBUG] Message::CatalogInstallAddonFetched(Retail, "35")
+13:19:31.780 [ajour_core::network][DEBUG] downloading remote version venture-plan-4.13 for 11779614220302842854
+13:19:32.024 [ajour::gui::update][DEBUG] Message::DownloadedAddon((Retail, 11779614220302842854, error: false))
+13:19:32.032 [ajour::gui::update][DEBUG] Message::UnpackedAddon((11779614220302842854, error: false))
+13:19:32.032 [ajour_core::parse][DEBUG] Retail - updating fingerprint for VenturePlan
+13:19:32.033 [ajour::gui::update][DEBUG] Message::AddonCacheUpdated(Venture Plan)
+13:19:32.042 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, VenturePlan, error: false))
+13:19:37.579 [ajour::gui::update][DEBUG] Interaction::InstallAddon(Retail, Catalog { source: TownlongYak })
+13:19:37.786 [ajour::gui::update][DEBUG] Message::CatalogInstallAddonFetched(Retail, "38")
+13:19:37.786 [ajour_core::network][DEBUG] downloading remote version opie-xe-5 for 4305722084076570820
+13:19:37.855 [ajour::gui::update][DEBUG] Message::DownloadedAddon((Retail, 4305722084076570820, error: true))
+13:19:37.855 [ajour][ERROR] Failed to download addon
+13:19:37.855 [ajour][ERROR] caused by: the server made an unrecoverable HTTP protocol violation
+13:19:37.855 [ajour][ERROR] caused by: [16] Error in the HTTP2 framing layer
+13:19:42.820 [ajour::gui::update][DEBUG] Interaction::CatalogResultSizeSelected(Choice(Curse))
+13:19:53.023 [ajour::gui::update][DEBUG] Interaction::CatalogResultSizeSelected(Choice(TownlongYak))
+13:19:56.815 [ajour::gui::update][DEBUG] Interaction::OpenLink(https://www.townlong-yak.com/addons/opie)
+13:20:01.687 [ajour::gui::update][DEBUG] Interaction::CatalogResultSizeSelected(Choice(Tukui))

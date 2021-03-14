@@ -1,0 +1,158 @@
+# i3 wm config file
+
+## Key Bindings
+### Set Mod Key
+set $mod Mod4
+
+### Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec dmenu_run
+bindsym --release $mod+Shift+d exec rofi -show run -theme sidebar
+bindsym --release Mod1+Tab exec rofi -show window -theme sidetab
+# bindsym $mod+Shift+d exec i3-dmenu-desktop
+### change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+### move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+### split in horizontal orientation
+bindsym $mod+h split h
+### split in vertical orientation
+bindsym $mod+v split v
+### enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+### change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+### toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+### change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+### focus the parent container
+bindsym $mod+a focus parent
+### Define names for default workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+### switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+### move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+### reload the configuration file
+bindsym $mod+Shift+c reload
+### restart i3 inplace
+bindsym $mod+Shift+r restart
+### exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit?' -B 'Yes' 'i3-msg exit'"
+### shutdown
+bindsym $mod+Mod1+s exec "i3-nagbar -m 'SHUTDOWN?' -B 'Shutdown' 'systemctl poweroff -i'
+### lock screen
+bindsym $mod+Mod1+l exec "i3lock -c000000 -e -f -i /home/thorsten/Documents/Wallpapers/3840x2160_arch_linux_02.png"
+### resize window (you can also use the mouse for that)
+mode "resize" {
+	bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+        # back to normal: Enter or Escape or $mod+r
+	bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+## Look
+### General
+hide_edge_borders both
+### Colors
+set $color1 #3366DD
+set $color1 #1793D1
+set $color2 #666666
+client.background #162025
+client.focused: #f2f2f2 #00253C #f2f2f #f2f2f2 #f2f2f2
+client.unfocused: #bfbfbf #162025 #bfbfbf #1c1b34 #100F45
+client.focused_inactive: #bfbfbf #162025 #bfbfbf #75404b #75404b
+client.urgent: #bfbfbf #162025 #bfbfbf #75404b #75404b
+client.placeholder: #bfbfbf #162025 #bfbfbf #75404b #75404b
+### Font
+font pango:Hack 8
+### Workspace Bar with Status
+bar {
+	position top
+        font pango:Hack 10, FontAwesome 10
+ 	status_command i3status
+}
+
+
+## Autostart
+exec --no-startup-id fbxkb
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id pasystray
+exec --no-startup-id copyq 
+exec --no-startup-id nm-applet
+exec --no-startup-id blueberry-tray
+# exec --no-startup-id remmina -i
+exec --no-startup-id xfce4-clipman
+exec --no-startup-id synergy-tray
+exec --no-startup-id pamac-tray
+exec --no-startup-id caffeine
+# exec --no-startup-id task-indicator
+
+# exec --no-startup-id xfce4-power-manage
+
+# exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
+
+exec /usr/bin/xrdb $HOME/.Xdefaults
+exec /usr/lib/polkit-1/polkitd --no-debug
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+## Application Launchers
+bindsym $mod+Shift+p exec /usr/bin/xfce4-screenshooter
+
+## Layout Defaults
+### Floating Popups
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+### Floating Applications
+for_window [class="Steam" instance="Steam"] floating enable
+for_window [class="Pinta" instance="Pinta"] floating enable
+for_window [class="diceydungeons" instance="diceydungeons"] floating enable
+
+## Load Workspaces
+
+##exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/thorsten/.config/i3/workspace-1.json'"
+
+## Workspace Layout
+# exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/thorsten/.config/i3/workspace-1.json'"
