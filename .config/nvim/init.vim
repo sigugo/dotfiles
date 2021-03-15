@@ -138,6 +138,8 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " Prettier shorthand
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+" coc-sql format shorthand
+command! -nargs=0 SQLFormat :CocCommand sql.Format
 
 " ===========================================
 
@@ -255,6 +257,11 @@ hi User0 guifg=#ffffff  guibg=#094afe	ctermfg=255	ctermbg=26
 hi Normal ctermbg=NONE
 
 " Keybinds
+nnoremap <leader>y "+yy
+vnoremap <leader>y "+y
+nnoremap <leader>p "+p
+vnoremap <leader>p "+p
+
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>

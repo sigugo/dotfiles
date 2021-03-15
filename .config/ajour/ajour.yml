@@ -67,8 +67,8 @@ column_config:
         hidden: false
     aura_columns: []
 window_size:
-  - 1644
-  - 902
+  - 1918
+  - 1052
 scale: 1.0
 backup_directory: ~
 backup_addons: false
@@ -79,4 +79,4 @@ weak_auras_account:
   Retail: JERUSALEMX
 alternating_row_colors: true
 language: English
-catalog_source: Tukui
+catalog_source: Curse
