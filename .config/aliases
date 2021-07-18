@@ -1,0 +1,50 @@
+#!/bin/sh
+
+# Aliases file
+
+## basic
+alias ls='lsd $LSD_OPTIONS'
+alias l='lsd $LSD_OPTIONS -l'
+alias ll='lsd $LSD_OPTIONS -lA'
+alias lspp='ls++ --potsf'
+alias yay='yay $PACMAN_OPTIONS'
+alias pacman='pacman $PACMAN_OPTIONS'
+alias update='yay -Syu'
+alias ccat='highlight --out-format=ansi'
+alias emacs='emacs -nw'
+alias sshinsecure='ssh -oKexAlgorithms=+diffie-hellman-group1-sha1'
+
+### helpers
+alias tstamp='date +%Y%m%d%H%M%S'
+
+### git sync for dotfiles and todo
+alias config='/usr/bin/git --git-dir=$DOTFILES --work-tree=$HOME'
+alias config-commit='config add -u && config commit -m "Quick Commit $(date +%Y-%m-%d.%H:%M:%S)"'
+alias config-push='config push -u origin master'
+alias tasks='nvim ~/todo.md'
+alias todo='/usr/bin/git --git-dir=$HOME/.todo/ --work-tree=$HOME'
+alias update-todo='todo add todo.md && todo commit -m "Update $(date +%Y-%m-%d.%H:%M:%S)" && todo push -u origin'
+
+### manage wine
+alias wineprocs='ps auxwww | egrep -iE "wine|\.exe" | grep -v grep'
+alias wineprocids='wineprocs | tr -s " " | cut -d" " -f 2'
+alias winekill='wineprocids | xargs kill -9 2>&1 > /dev/null || echo "No wine processes found"'
+alias wineterm='wineprocids | xargs kill -15 2>&1 > /dev/null || echo "No wine processes found"'
+
+### youtube
+alias yt='youtube-dl --add-metadata -ic'
+alias yta='youtube-dl --add-metadata -icc'
+alias ytv='youtube-viewer'
+
+### work
+alias tssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no kace_support@localhost'
+alias trssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no root@localhost'
+alias tsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no kace_support@localhost -t -- screen -R'
+alias trsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no root@localhost -t -- screen -R'
+alias readdocs='ranger $HOME/Documents/Text/Manuals'
+alias iamgroot='cat $HOME/Documents/notes/kace/KnowHow/iamgroot.txt'
+#alias iamgroot='cat $XDG_DOCUMENTS_DIR/notes/kace/KnowHow/iamgroot.txt'
+
+### games
+alias jorbs='/usr/bin/streamlink https://twitch.tv/joinrbs best'
+
