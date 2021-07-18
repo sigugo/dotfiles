@@ -8,13 +8,14 @@ shopt -s autocd
 
 ## Environment variables 
 export LS_OPTIONS='--color=auto --group-directories-first'
+export LSD_OPTIONS='--color=auto --group-dirs first'
 export PACMAN_OPTIONS='--color=auto'
 eval "`dircolors`"
 
 ## aliases
-alias ls='ls $LS_OPTIONS'
-alias ll='ls $LS_OPTIONS -l'
-alias l='ls $LS_OPTIONS -lA'
+alias ls='lsd $LSD_OPTIONS'
+alias l='lsd $LSD_OPTIONS -l'
+alias ll='lsd $LSD_OPTIONS -lA'
 alias lspp='ls++ --potsf'
 alias yay='yay $PACMAN_OPTIONS'
 alias pacman='pacman $PACMAN_OPTIONS'
@@ -48,6 +49,8 @@ alias ytv='youtube-viewer'
 ### work
 alias tssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no kace_support@localhost'
 alias trssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no root@localhost'
+alias tsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no kace_support@localhost -t -- screen -R'
+alias trsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no root@localhost -t -- screen -R'
 alias readdocs='ranger $HOME/Documents/Text/Manuals'
 alias iamgroot='cat $HOME/Documents/notes/kace/KnowHow/iamgroot.txt'
 #alias iamgroot='cat $XDG_DOCUMENTS_DIR/notes/kace/KnowHow/iamgroot.txt'

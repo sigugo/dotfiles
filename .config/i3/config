@@ -79,6 +79,13 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit?' -B 'Yes' 'i3-msg exit'"
 ### shutdown
 bindsym $mod+Mod1+s exec "i3-nagbar -m 'SHUTDOWN?' -B 'Shutdown' 'systemctl poweroff -i'
+mode "$mode_shutdown" {
+	bindsym r exec --no-startup-id i3exit reboot, mode "default" 
+	bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+	
+	bindsym Return mode "default"    
+	bindsym Escape mode "default"
+}
 ### lock screen
 bindsym $mod+Mod1+l exec "i3lock -c000000 -e -f -i /home/thorsten/Documents/Wallpapers/3840x2160_arch_linux_02.png"
 ### resize window (you can also use the mouse for that)
@@ -115,24 +122,26 @@ bar {
         font pango:Hack 10, FontAwesome 10
  	status_command i3status
 }
+### Bar Toggle
+bindsym $mod+M bar mode toggle
 
 
 ## Autostart
-exec --no-startup-id fbxkb
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id picom --xrender-sync-fence --no-fading-destroyed-argb --no-fading-openclose  --fade-in-step=1.0  --fade-out-step=1.0 --menu-opacity=1.0
+exec --no-startup-id fbxkb
 exec --no-startup-id pasystray
 exec --no-startup-id copyq 
 exec --no-startup-id nm-applet
 exec --no-startup-id blueberry-tray
-# exec --no-startup-id remmina -i
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id synergy-tray
 exec --no-startup-id pamac-tray
 exec --no-startup-id caffeine
+
+# exec --no-startup-id remmina -i
 # exec --no-startup-id task-indicator
-
 # exec --no-startup-id xfce4-power-manage
-
 # exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 
 exec /usr/bin/xrdb $HOME/.Xdefaults
@@ -149,6 +158,11 @@ for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 for_window [class="Steam" instance="Steam"] floating enable
 for_window [class="Pinta" instance="Pinta"] floating enable
 for_window [class="diceydungeons" instance="diceydungeons"] floating enable
+for_window [class="turtleworld" instance="TurtleWorld"] floating enable
+### Game overrides
+for_window [class="steam_app_1182480"] floating enable
+for_window [class="steam_app_1222680"] floating enable
+
 
 ## Load Workspaces
 

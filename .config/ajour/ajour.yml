@@ -1,6 +1,8 @@
 ---
 wow:
-  directory: /home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft
+  directory: ~
+  directories:
+    Retail: /home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_
   flavor: Retail
 addons:
   global_release_channel: Stable
@@ -9,10 +11,10 @@ addons:
       - MythicDungeonTools
   release_channels:
     Retail:
-      BigWigs: Stable
       RUF: Stable
+      BigWigs: Stable
   delete_saved_variables: false
-theme: ~
+theme: Dark
 column_config:
   V3:
     my_addons_columns:
@@ -80,3 +82,5 @@ weak_auras_account:
 alternating_row_colors: true
 language: English
 catalog_source: Curse
+auto_update: false
+compression_format: Zip

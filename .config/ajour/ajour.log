@@ -1,10 +1,11 @@
-12:34:41.408 [ajour][INFO] Ajour 0.7.2 has started.
-12:34:41.408 [ajour::gui][DEBUG] config loaded:
+11:42:06.090 [ajour][INFO] Ajour 1.0.1 has started.
+11:42:06.091 [ajour::gui][DEBUG] config loaded:
 Config {
     wow: Wow {
-        directory: Some(
-            "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft",
-        ),
+        directory: None,
+        directories: {
+            Retail: "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_",
+        },
         flavor: Retail,
     },
     addons: Addons {
@@ -16,13 +17,15 @@ Config {
         },
         release_channels: {
             Retail: {
-                "BigWigs": Stable,
                 "RUF": Stable,
+                "BigWigs": Stable,
             },
         },
         delete_saved_variables: false,
     },
-    theme: None,
+    theme: Some(
+        "Dark",
+    ),
     column_config: V3 {
         my_addons_columns: [
             ColumnConfigV2 {
@@ -140,8 +143,8 @@ Config {
     },
     window_size: Some(
         (
-            1644,
-            902,
+            1918,
+            1052,
         ),
     ),
     scale: Some(
@@ -158,62 +161,49 @@ Config {
     alternating_row_colors: true,
     language: English,
     catalog_source: Some(
-        Tukui,
+        Curse,
     ),
+    auto_update: false,
+    compression_format: Zip,
 }
-12:34:41.410 [ajour::gui][DEBUG] antialiasing: true
-12:34:41.570 [ajour_core::theme][DEBUG] loading user themes
-12:34:41.570 [ajour_core::utility][DEBUG] checking for application update
-12:34:41.572 [ajour_core::fs::theme][DEBUG] loaded 0 user themes
-12:34:41.601 [ajour::gui::update][DEBUG] Message::CachesLoaded(error: false)
-12:34:41.601 [ajour::gui::update][DEBUG] Message::ThemesLoaded(0 themes)
-12:34:41.604 [ajour::gui::update][DEBUG] Message::Parse
-12:34:41.604 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_/Interface/AddOns"
-12:34:41.605 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_ptr_/Interface/AddOns"
-12:34:41.605 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_beta_/Interface/AddOns"
-12:34:41.606 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_classic_/Interface/AddOns"
-12:34:41.606 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_classic_ptr_/Interface/AddOns"
-12:34:41.606 [ajour_core::parse][DEBUG] Retail - parsing addons folder
-12:34:41.606 [ajour_core::parse][DEBUG] Retail PTR - parsing addons folder
-12:34:41.606 [ajour_core::parse][DEBUG] Retail Beta - parsing addons folder
-12:34:41.606 [ajour_core::parse][DEBUG] Classic PTR - parsing addons folder
-12:34:41.606 [ajour_core::parse][DEBUG] Classic - parsing addons folder
-12:34:41.607 [ajour_core::parse][DEBUG] Retail - 125 folders in AddOns directory to parse
-12:34:41.610 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Retail, is_installed: true)
-12:34:41.611 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Retail PTR, is_installed: false)
-12:34:41.611 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Retail Beta, is_installed: false)
-12:34:41.611 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Classic, is_installed: false)
-12:34:41.611 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Classic PTR, is_installed: false)
-12:34:41.611 [ajour][ERROR] Failed to parse addons
-12:34:41.611 [ajour][ERROR] caused by: Addon directory not found: "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_beta_/Interface/AddOns"
-12:34:41.611 [ajour][ERROR] Failed to parse addons
-12:34:41.611 [ajour][ERROR] caused by: Addon directory not found: "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_ptr_/Interface/AddOns"
-12:34:41.611 [ajour][ERROR] Failed to parse addons
-12:34:41.611 [ajour][ERROR] caused by: Addon directory not found: "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_classic_ptr_/Interface/AddOns"
-12:34:41.611 [ajour][ERROR] Failed to parse addons
-12:34:41.611 [ajour][ERROR] caused by: Addon directory not found: "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_classic_/Interface/AddOns"
-12:34:41.611 [ajour_core::parse][DEBUG] Retail - 125 fingerprints: 125 cached, 0 calculated, 0 added, 0 removed
-12:34:41.611 [ajour::gui::update][DEBUG] Message::ListWeakAurasAccounts(Retail, num_accounts: 1)
-12:34:41.657 [ajour_core::parse][DEBUG] Retail - 125 addon folders successfully parsed from '.toc'
-12:34:41.657 [ajour_core::parse][DEBUG] Retail - 2 valid cache entries retrieved
-12:34:41.657 [ajour_core::parse][DEBUG] Retail - 123 unique fingerprints to check against curse api
-12:34:41.947 [ajour::gui::update][DEBUG] Message::LatestRelease(Some("0.7.2"))
-12:34:42.034 [ajour_core::catalog][DEBUG] Downloaded latest catalog from https://github.com/ajour/ajour-catalog/raw/master/catalog-2.0.json
-12:34:42.130 [ajour::gui::update][DEBUG] Message::ParsedAuras(Retail, num_auras: 29)
-12:34:42.380 [ajour::gui::update][DEBUG] Message::CatalogDownloaded(15999 addons in catalog)
-12:34:42.987 [ajour_core::parse][DEBUG] Retail - 66 curse packages fetched
-12:34:42.987 [ajour_core::parse][DEBUG] Retail - 0 tukui packages fetched
-12:34:43.281 [ajour_core::parse][DEBUG] Retail - 23 wowi packages fetched
-12:34:43.632 [ajour_core::parse][DEBUG] Retail - 1 townlong packages fetched
-12:34:43.632 [ajour_core::parse][DEBUG] Retail - 0 git packages fetched
-12:34:43.633 [ajour_core::parse][DEBUG] Retail - 66 addons built from curse packages
-12:34:43.633 [ajour_core::parse][DEBUG] Retail - 0 addons built from tukui packages
-12:34:43.633 [ajour_core::parse][DEBUG] Retail - 1 addons built from wowi packages
-12:34:43.633 [ajour_core::parse][DEBUG] Retail - 1 addons built from townlong-yak packages
-12:34:43.633 [ajour_core::parse][DEBUG] Retail - 0 addons built from git packages
-12:34:43.633 [ajour_core::parse][DEBUG] Retail - 1 unknown addon folders
-12:34:43.633 [ajour_core::parse][DEBUG] Retail - 69 addons successfully parsed
-12:34:43.634 [ajour::gui::update][DEBUG] Message::ParsedAddons(Retail, 69 addons)
-12:34:59.681 [ajour::gui::update][DEBUG] Interaction::ModeSelected(MyWeakAuras(Retail))
-12:35:33.148 [ajour::gui::update][DEBUG] Interaction::ModeSelected(Catalog)
-12:35:44.007 [ajour::gui::update][DEBUG] Interaction::CatalogResultSizeSelected(Choice(Curse))
+11:42:06.093 [ajour::gui][DEBUG] antialiasing: true
+11:42:07.506 [ajour_core::theme][DEBUG] loading user themes
+11:42:07.506 [ajour_core::utility][DEBUG] checking for application update
+11:42:07.507 [ajour_core::fs::theme][DEBUG] loaded 0 user themes
+11:42:08.757 [ajour::gui::update][DEBUG] Message::CachesLoaded(error: false)
+11:42:08.757 [ajour::gui::update][DEBUG] Message::ThemesLoaded(0 themes)
+11:42:08.757 [ajour::gui::update][DEBUG] Message::LatestRelease(Some("1.1.0"))
+11:42:09.008 [ajour::gui::update][DEBUG] Message::Parse
+11:42:09.009 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_/Interface/AddOns"
+11:42:09.009 [ajour_core::parse][DEBUG] Retail - parsing addons folder
+11:42:09.009 [ajour_core::parse][DEBUG] Retail - 129 folders in AddOns directory to parse
+11:42:09.012 [ajour_core::parse][DEBUG] Retail - 129 fingerprints: 129 cached, 0 calculated, 0 added, 0 removed
+11:42:09.017 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Retail, is_installed: true)
+11:42:09.018 [ajour::gui::update][DEBUG] Message::ListWeakAurasAccounts(Retail, num_accounts: 1)
+11:42:09.026 [ajour_core::parse][DEBUG] Retail - 129 addon folders successfully parsed from '.toc'
+11:42:09.026 [ajour_core::parse][DEBUG] Retail - 2 valid cache entries retrieved
+11:42:09.026 [ajour_core::parse][DEBUG] Retail - 127 unique fingerprints to check against curse api
+11:42:09.107 [ajour_core::catalog][DEBUG] Downloaded latest catalog from https://github.com/ajour/ajour-catalog/raw/master/catalog-2.0.json
+11:42:09.444 [ajour::gui::update][DEBUG] Message::CatalogDownloaded(16221 addons in catalog)
+11:42:10.405 [ajour::gui::update][DEBUG] Message::ParsedAuras(Retail, num_auras: 40)
+11:42:10.526 [ajour_core::parse][DEBUG] Retail - 70 curse packages fetched
+11:42:10.526 [ajour_core::parse][DEBUG] Retail - 0 tukui packages fetched
+11:42:10.901 [ajour_core::parse][DEBUG] Retail - 24 wowi packages fetched
+11:42:11.262 [ajour_core::parse][DEBUG] Retail - 1 townlong packages fetched
+11:42:11.262 [ajour_core::parse][DEBUG] Retail - 0 git packages fetched
+11:42:11.262 [ajour_core::parse][DEBUG] Retail - 69 addons built from curse packages
+11:42:11.262 [ajour_core::parse][DEBUG] Retail - 0 addons built from tukui packages
+11:42:11.262 [ajour_core::parse][DEBUG] Retail - 1 addons built from wowi packages
+11:42:11.262 [ajour_core::parse][DEBUG] Retail - 1 addons built from townlong-yak packages
+11:42:11.262 [ajour_core::parse][DEBUG] Retail - 0 addons built from git packages
+11:42:11.262 [ajour_core::parse][DEBUG] Retail - 1 unknown addon folders
+11:42:11.262 [ajour_core::parse][DEBUG] Retail - 72 addons successfully parsed
+11:42:11.264 [ajour::gui::update][DEBUG] Message::ParsedAddons(Retail, 72 addons)
+11:42:14.638 [ajour::gui::update][DEBUG] Interaction::ModeSelected(Catalog)
+11:42:22.939 [ajour::gui::update][DEBUG] Interaction::InstallAddon(Retail, Catalog { source: Curse })
+11:42:23.149 [ajour::gui::update][DEBUG] Message::CatalogInstallAddonFetched(Retail, "26308")
+11:42:23.149 [ajour_core::network][DEBUG] downloading remote version v9.0.2 for 10094971678958213426
+11:42:24.605 [ajour::gui::update][DEBUG] Message::DownloadedAddon((Retail, 10094971678958213426, error: false))
+11:42:24.608 [ajour::gui::update][DEBUG] Message::UnpackedAddon((10094971678958213426, error: false))
+11:42:24.609 [ajour_core::parse][DEBUG] Retail - updating fingerprint for SlashIn
+11:42:24.614 [ajour::gui::update][DEBUG] Message::UpdateFingerprint((Retail, SlashIn, error: false))

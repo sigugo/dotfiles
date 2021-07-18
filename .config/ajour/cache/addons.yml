@@ -1,21 +1,23 @@
 ---
 V1:
   Retail:
-    - title: TomTom
-      repository: WowI
-      repository_id: "7032"
-      primary_folder_id: TomTom
-      folder_names:
-        - TomTom
-      modified: "2021-03-13T11:52:11.618911292Z"
-      external_release_id:
-        Version: v90002-1.2.0
     - title: Venture Plan
       repository: TownlongYak
       repository_id: "35"
       primary_folder_id: VenturePlan
       folder_names:
         - VenturePlan
-      modified: "2021-03-13T12:19:32.032307065Z"
+      modified: "2021-06-26T10:32:53.149607472Z"
       external_release_id:
-        FileId: 24072
+        FileId: 36754
+    - title: TomTom
+      repository: WowI
+      repository_id: "7032"
+      primary_folder_id: TomTom
+      folder_names:
+        - TomTom
+        - TomTom
+        - TomTom
+      modified: "2021-07-14T16:50:57.019983053Z"
+      external_release_id:
+        Version: v3.0.2
