@@ -1,4 +1,6 @@
 require'autocmd'
 require'package_manager'
-require'settings'
+require'options'
+require'colorscheme'
 require'keybindings'
+require'lsp'

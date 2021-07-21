@@ -1,11 +1,6 @@
-local key_mapper = function(mode, key, result)
-  vim.api.nvim_set_keymap(
-    mode,
-    key,
-    result,
-    { noremap = true, silent = true}
-  )
-end
+require'utilities'
+
+vim.g.mapleader = ' '
 
 -- SYS clipboard
 key_mapper('n', '<leader>y', '"+yy')
@@ -36,3 +31,4 @@ key_mapper('n', '<leader>fh', ':lua require"telescope.builtin".help_tags()<CR>')
 key_mapper('n', '<leader>fb', ':lua require"telescope.builtin".buffers()<CR>')
 key_mapper('n', '<leader>gf', ':lua require"telescope.builtin".git_files()<CR>')
 key_mapper('n', '<leader>gs', ':lua require"telescope.builtin".git_status()<CR>')
+key_mapper('n', '<leader>fp', ':lua require("telescope").extensions.packer.plugins(opts)<CR>')
