@@ -1,6 +1,16 @@
 require'utilities'
-
 vim.g.mapleader = ' '
+-- Buffers
+key_mapper('', '<leader>p', ':bprev<CR>')
+key_mapper('', '<leader>n', ':bnext<CR>')
+key_mapper('', '<leader>bd', ':bd<CR>')
+key_mapper('', '<leader>q', ':wq<CR>')
+key_mapper('', '<leader>w', ':w<CR>')
+
+-- Escape
+key_mapper('i', 'jk', '<ESC>')
+key_mapper('i', 'JK', '<ESC>')
+key_mapper('i', 'jK', '<ESC>')
 
 -- SYS clipboard
 key_mapper('n', '<leader>y', '"+yy')
