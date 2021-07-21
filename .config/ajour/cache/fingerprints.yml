@@ -36,30 +36,30 @@ Retail:
       secs_since_epoch: 1626281456
       nanos_since_epoch: 285203900
   - title: BetterWardrobe
-    hash: 2378650369
+    hash: 2288060748
     modified:
-      secs_since_epoch: 1626281459
-      nanos_since_epoch: 487559100
+      secs_since_epoch: 1626857703
+      nanos_since_epoch: 803313600
   - title: BetterWardrobe_Tooltips
     hash: 2638460197
     modified:
       secs_since_epoch: 1620034596
       nanos_since_epoch: 490303500
   - title: BigWigs
-    hash: 176842133
+    hash: 2683639898
     modified:
-      secs_since_epoch: 1626281460
-      nanos_since_epoch: 193273900
+      secs_since_epoch: 1626857709
+      nanos_since_epoch: 839498500
   - title: BigWigs_BurningCrusade
     hash: 3707840531
     modified:
       secs_since_epoch: 1626281458
       nanos_since_epoch: 412934200
   - title: BigWigs_CastleNathria
-    hash: 3447504762
+    hash: 2974946199
     modified:
-      secs_since_epoch: 1626281460
-      nanos_since_epoch: 225994900
+      secs_since_epoch: 1626857709
+      nanos_since_epoch: 866274100
   - title: BigWigs_Cataclysm
     hash: 232028988
     modified:
@@ -76,10 +76,10 @@ Retail:
       secs_since_epoch: 1626281458
       nanos_since_epoch: 94275900
   - title: BigWigs_Core
-    hash: 3913709507
+    hash: 910547494
     modified:
-      secs_since_epoch: 1626281460
-      nanos_since_epoch: 200795000
+      secs_since_epoch: 1626857709
+      nanos_since_epoch: 844588200
   - title: BigWigs_Legion
     hash: 1846298157
     modified:
@@ -91,30 +91,30 @@ Retail:
       secs_since_epoch: 1626281459
       nanos_since_epoch: 13370100
   - title: BigWigs_Options
-    hash: 544991537
+    hash: 1634983312
     modified:
-      secs_since_epoch: 1626281460
-      nanos_since_epoch: 211239400
+      secs_since_epoch: 1626857709
+      nanos_since_epoch: 854476800
   - title: BigWigs_Plugins
-    hash: 492540701
+    hash: 851919002
     modified:
-      secs_since_epoch: 1626281460
-      nanos_since_epoch: 221600600
+      secs_since_epoch: 1626857709
+      nanos_since_epoch: 863229700
   - title: BigWigs_SanctumOfDomination
-    hash: 2847724787
+    hash: 1584714962
     modified:
-      secs_since_epoch: 1626281460
-      nanos_since_epoch: 234701400
+      secs_since_epoch: 1626857709
+      nanos_since_epoch: 872370800
   - title: BigWigs_Shadowlands
-    hash: 1915162929
+    hash: 1797294744
     modified:
-      secs_since_epoch: 1626281460
-      nanos_since_epoch: 236611100
+      secs_since_epoch: 1626857709
+      nanos_since_epoch: 873594200
   - title: BigWigs_Voice
-    hash: 3398938445
+    hash: 432793020
     modified:
-      secs_since_epoch: 1626281466
-      nanos_since_epoch: 324389400
+      secs_since_epoch: 1626857765
+      nanos_since_epoch: 344977400
   - title: Masque_CleanUI
     hash: 496166378
     modified:
@@ -136,10 +136,10 @@ Retail:
       secs_since_epoch: 1612784655
       nanos_since_epoch: 848118400
   - title: MazeHelper
-    hash: 3340480105
+    hash: 2199833181
     modified:
-      secs_since_epoch: 1626281458
-      nanos_since_epoch: 980728200
+      secs_since_epoch: 1626857713
+      nanos_since_epoch: 523824500
   - title: MBB
     hash: 390074621
     modified:
@@ -151,10 +151,10 @@ Retail:
       secs_since_epoch: 1626281458
       nanos_since_epoch: 90111800
   - title: MountCollector
-    hash: 2999946324
+    hash: 3404476731
     modified:
-      secs_since_epoch: 1626281456
-      nanos_since_epoch: 671407800
+      secs_since_epoch: 1626857713
+      nanos_since_epoch: 721381800
   - title: MoveAnything
     hash: 3761521980
     modified:
@@ -291,10 +291,10 @@ Retail:
       secs_since_epoch: 1626281456
       nanos_since_epoch: 762544800
   - title: HandyNotes_Shadowlands
-    hash: 2112730289
+    hash: 3759263856
     modified:
-      secs_since_epoch: 1626281456
-      nanos_since_epoch: 401085400
+      secs_since_epoch: 1626857703
+      nanos_since_epoch: 99251400
   - title: HeroCache
     hash: 1356230375
     modified:
@@ -506,10 +506,10 @@ Retail:
       secs_since_epoch: 1626281457
       nanos_since_epoch: 36353700
   - title: Details
-    hash: 4072856173
+    hash: 1454750014
     modified:
-      secs_since_epoch: 1626281461
-      nanos_since_epoch: 298608900
+      secs_since_epoch: 1626857726
+      nanos_since_epoch: 583316200
   - title: Details_ChartViewer
     hash: 2568252080
     modified:
@@ -518,23 +518,23 @@ Retail:
   - title: Details_DataStorage
     hash: 2458572092
     modified:
-      secs_since_epoch: 1626281461
-      nanos_since_epoch: 303522800
+      secs_since_epoch: 1626857726
+      nanos_since_epoch: 586957100
   - title: Details_EncounterDetails
     hash: 4244118767
     modified:
-      secs_since_epoch: 1626281461
-      nanos_since_epoch: 308203400
+      secs_since_epoch: 1626857726
+      nanos_since_epoch: 589896300
   - title: Details_RaidCheck
     hash: 2451491839
     modified:
-      secs_since_epoch: 1626281461
-      nanos_since_epoch: 314218900
+      secs_since_epoch: 1626857726
+      nanos_since_epoch: 594364100
   - title: Details_Streamer
     hash: 1321200748
     modified:
-      secs_since_epoch: 1626281461
-      nanos_since_epoch: 320512300
+      secs_since_epoch: 1626857726
+      nanos_since_epoch: 598782800
   - title: Details_TimeLine
     hash: 3961313689
     modified:
@@ -543,113 +543,113 @@ Retail:
   - title: Details_TinyThreat
     hash: 3611309130
     modified:
-      secs_since_epoch: 1626281461
-      nanos_since_epoch: 323230500
+      secs_since_epoch: 1626857726
+      nanos_since_epoch: 600430000
   - title: Details_Vanguard
     hash: 1777393409
     modified:
-      secs_since_epoch: 1626281461
-      nanos_since_epoch: 326565600
+      secs_since_epoch: 1626857726
+      nanos_since_epoch: 602427800
   - title: Dominos
     hash: 1129448896
     modified:
       secs_since_epoch: 1626281458
       nanos_since_epoch: 895052200
   - title: PremadeGroupsFilter
-    hash: 157628125
+    hash: 142408780
     modified:
-      secs_since_epoch: 1626281456
-      nanos_since_epoch: 793272300
+      secs_since_epoch: 1626857702
+      nanos_since_epoch: 556238600
   - title: Quartz
     hash: 3210635257
     modified:
       secs_since_epoch: 1626281459
       nanos_since_epoch: 91009300
   - title: RaiderIO
-    hash: 4133578449
+    hash: 3714680413
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 472411800
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 247526200
   - title: RaiderIO_DB_EU_A
     hash: 1564507215
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 475883600
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 249837900
   - title: RaiderIO_DB_EU_A_R
     hash: 3769813290
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 476173500
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 249994500
   - title: RaiderIO_DB_EU_H
     hash: 1580758516
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 476436600
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 250149200
   - title: RaiderIO_DB_EU_H_R
     hash: 4123658688
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 476697600
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 250306800
   - title: RaiderIO_DB_KR_A
     hash: 1633421421
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 476960500
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 250461100
   - title: RaiderIO_DB_KR_A_R
     hash: 1568648091
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 477232400
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 250614500
   - title: RaiderIO_DB_KR_H
     hash: 3039966074
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 477491800
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 250771400
   - title: RaiderIO_DB_KR_H_R
     hash: 2587276450
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 477751800
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 250927400
   - title: RaiderIO_DB_TW_A
     hash: 293673613
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 478015400
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 251081200
   - title: RaiderIO_DB_TW_A_R
     hash: 3977309024
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 478277400
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 251234500
   - title: RaiderIO_DB_TW_H
     hash: 678345932
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 478546100
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 251386800
   - title: RaiderIO_DB_TW_H_R
     hash: 1749274878
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 478808600
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 251541000
   - title: RaiderIO_DB_US_A
     hash: 968396578
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 479071900
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 251713200
   - title: RaiderIO_DB_US_A_R
     hash: 1641577936
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 479336600
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 251943500
   - title: RaiderIO_DB_US_H
     hash: 225737261
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 479595300
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 252114400
   - title: RaiderIO_DB_US_H_R
     hash: 3289094765
     modified:
-      secs_since_epoch: 1626281468
-      nanos_since_epoch: 479855200
+      secs_since_epoch: 1626857768
+      nanos_since_epoch: 252269100
   - title: SetCollector
     hash: 1376426354
     modified:
