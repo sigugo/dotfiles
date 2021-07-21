@@ -46,20 +46,20 @@ Retail:
       secs_since_epoch: 1620034596
       nanos_since_epoch: 490303500
   - title: BigWigs
-    hash: 2683639898
+    hash: 2283719137
     modified:
-      secs_since_epoch: 1626857709
-      nanos_since_epoch: 839498500
+      secs_since_epoch: 1626888379
+      nanos_since_epoch: 520823800
   - title: BigWigs_BurningCrusade
     hash: 3707840531
     modified:
       secs_since_epoch: 1626281458
       nanos_since_epoch: 412934200
   - title: BigWigs_CastleNathria
-    hash: 2974946199
+    hash: 2183374302
     modified:
-      secs_since_epoch: 1626857709
-      nanos_since_epoch: 866274100
+      secs_since_epoch: 1626888379
+      nanos_since_epoch: 547388700
   - title: BigWigs_Cataclysm
     hash: 232028988
     modified:
@@ -76,10 +76,10 @@ Retail:
       secs_since_epoch: 1626281458
       nanos_since_epoch: 94275900
   - title: BigWigs_Core
-    hash: 910547494
+    hash: 4204397807
     modified:
-      secs_since_epoch: 1626857709
-      nanos_since_epoch: 844588200
+      secs_since_epoch: 1626888379
+      nanos_since_epoch: 525404100
   - title: BigWigs_Legion
     hash: 1846298157
     modified:
@@ -91,25 +91,25 @@ Retail:
       secs_since_epoch: 1626281459
       nanos_since_epoch: 13370100
   - title: BigWigs_Options
-    hash: 1634983312
+    hash: 2671370344
     modified:
-      secs_since_epoch: 1626857709
-      nanos_since_epoch: 854476800
+      secs_since_epoch: 1626888379
+      nanos_since_epoch: 532710600
   - title: BigWigs_Plugins
-    hash: 851919002
+    hash: 1744217176
     modified:
-      secs_since_epoch: 1626857709
-      nanos_since_epoch: 863229700
+      secs_since_epoch: 1626888379
+      nanos_since_epoch: 543940500
   - title: BigWigs_SanctumOfDomination
-    hash: 1584714962
+    hash: 1300677545
     modified:
-      secs_since_epoch: 1626857709
-      nanos_since_epoch: 872370800
+      secs_since_epoch: 1626888379
+      nanos_since_epoch: 553806900
   - title: BigWigs_Shadowlands
     hash: 1797294744
     modified:
-      secs_since_epoch: 1626857709
-      nanos_since_epoch: 873594200
+      secs_since_epoch: 1626888379
+      nanos_since_epoch: 556219000
   - title: BigWigs_Voice
     hash: 432793020
     modified:

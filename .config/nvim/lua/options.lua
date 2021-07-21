@@ -25,4 +25,7 @@ options('w', 'relativenumber', true)
 options('w', 'signcolumn', 'yes')
 options('w', 'wrap', true)
 
--- vim.g.mapleader = ' '
+-- vim.cmd [[set shortmess+=c]]
+-- vim.g.completion_confirm_key = ""
+-- vim.g.completion_matching_strategy_list = {'exact', 'substring', 'fuzzy'}
+

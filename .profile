@@ -1,5 +1,3 @@
-export PATH=$HOME/bin:$HOME/.config/local/bin:$HOME/.emacs.d/bin:$HOME/go/bin:$PATH
-
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
@@ -28,3 +26,6 @@ export IDEA_JDK=/usr/lib/jvm/jdk-jetbrains
 
 export PACMAN_OPTIONS=""
 export LSD_OPTIONS=""
+
+
+export PATH=$HOME/bin:$HOME/.config/local/bin:$HOME/.emacs.d/bin:$GOBIN:$PATH

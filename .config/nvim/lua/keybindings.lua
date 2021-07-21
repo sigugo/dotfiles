@@ -1,5 +1,7 @@
 require'utilities'
+
 vim.g.mapleader = ' '
+
 -- Buffers
 key_mapper('', '<leader>p', ':bprev<CR>')
 key_mapper('', '<leader>n', ':bnext<CR>')
@@ -17,6 +19,20 @@ key_mapper('n', '<leader>y', '"+yy')
 key_mapper('v', '<leader>y', '"+y')
 key_mapper('n', '<leader>p', '"+p')
 key_mapper('v', '<leader>p', '"+p')
+
+-- Window
+key_mapper('n', '<leader>sv', ':vsplit<CR>')
+key_mapper('n', '<leader>sh', ':split<CR>')
+-- key_mapper('n', '<up>',    ':resize +2<CR>')
+-- key_mapper('n', '<down>',  ':resize -2<CR>')
+-- key_mapper('n', '<left>',  ':vertical resize -2<CR>')
+-- key_mapper('n', '<right>', ':vertical resize +2<CR>')
+key_mapper('n', '<leader>rr', '<C-w>r')
+key_mapper('n', '<leader>=', '<C-w>=')
+key_mapper('n', '<leader>l', ':wincmd l<CR>')
+key_mapper('n', '<leader>k', ':wincmd k<CR>')
+key_mapper('n', '<leader>j', ':wincmd j<CR>')
+key_mapper('n', '<leader>h', ':wincmd h<CR>')
 
 -- LSP
 key_mapper('n', '<leader>dn', ':lua vim.lsp.diagnostic.goto_next()<CR>')
@@ -42,3 +58,4 @@ key_mapper('n', '<leader>fb', ':lua require"telescope.builtin".buffers()<CR>')
 key_mapper('n', '<leader>gf', ':lua require"telescope.builtin".git_files()<CR>')
 key_mapper('n', '<leader>gs', ':lua require"telescope.builtin".git_status()<CR>')
 key_mapper('n', '<leader>fp', ':lua require("telescope").extensions.packer.plugins(opts)<CR>')
+

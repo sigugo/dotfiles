@@ -13,3 +13,7 @@ function options(scope, key, value)
     scopes[scope][key] = value
     if scope ~= 'o' then scopes['o'][key] = value end
 end
+
+-- function execute(...)
+--     vim.api.nvim_command(...)
+-- end
