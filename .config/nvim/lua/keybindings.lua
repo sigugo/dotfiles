@@ -6,6 +6,7 @@ vim.g.mapleader = ' '
 key_mapper('', '<leader>p', ':bprev<CR>')
 key_mapper('', '<leader>n', ':bnext<CR>')
 key_mapper('', '<leader>bd', ':bd<CR>')
+key_mapper('', '<leader>bq', ':bd!<CR>')
 key_mapper('', '<leader>q', ':wq<CR>')
 key_mapper('', '<leader>w', ':w<CR>')
 
@@ -45,7 +46,8 @@ key_mapper('n', 'gw', ':lua vim.lsp.buf.document_symbol()<CR>')
 key_mapper('n', 'gW', ':lua vim.lsp.buf.workspace_symbol()<CR>')
 key_mapper('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
 key_mapper('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>')
-key_mapper('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
+--  key_mapper('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
+key_mapper('n', 'K', ':lua require"lspsaga.hover".render_hover_doc()<CR>')
 key_mapper('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
 key_mapper('n', '<leader>ca', ':Lspsaga code_action<CR>')
 key_mapper('n', '<leader>rn', ':Lspsaga rename<CR>')
@@ -59,3 +61,24 @@ key_mapper('n', '<leader>gf', ':lua require"telescope.builtin".git_files()<CR>')
 key_mapper('n', '<leader>gs', ':lua require"telescope.builtin".git_status()<CR>')
 key_mapper('n', '<leader>fp', ':lua require("telescope").extensions.packer.plugins(opts)<CR>')
 
+-- Python
+key_mapper('', '<leader>py3', ':!python3 %<CR>')
+
+-- Nvim Tree
+key_mapper('n', '<leader>tt', ':NvimTreeToggle<CR>')
+key_mapper('n', '<leader>ff', ':NvimTreeFindFile<CR>')
+
+-- Hop
+key_mapper('', '<leader><leader>', ':HopWord<CR>')
+
+-- Git
+key_mapper('', '<leader>gb', ':Gitsigns blame_line<CR>')
+key_mapper('', '<leader>gt', ':Gitsigns toggle_signs<CR>')
+key_mapper('', '<leader>gp', ':Gitsigns preview_hunk<CR>')
+key_mapper('', '<leader>gi', ':Gitsigns next_hunk<CR>')
+key_mapper('', '<leader>go', ':Gitsigns prev_hunk<CR>')
+key_mapper('', '<leader>gu', ':Gitsigns reset_hunk<CR>')
+
+-- Snippets
+-- require'snippets'.use_suggested_mappings()
+-- key_mapper('i', '<c-j>', '<cmd>lua return require"snippets".expand_or_advance(1)<CR>')
