@@ -1,24 +1,4 @@
-local execute = vim.api.nvim_command
-local fn = vim.fn
-
--- ensure that packer is installed
-local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-    execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
-    execute('packadd packer.nvim')
-end
-
--- for opt mode
-vim.cmd [[packadd packer.nvim]]
-
--- compile when changing this file
-vim.cmd 'autocmd BufWritePost package_manager.lua PackerCompile'
-
-
--- startup
 return require('packer').startup(function()
-    
-    -- plugins
     
     use { 'wbthomason/packer.nvim', opt=true }      -- self manage
     
@@ -45,12 +25,18 @@ return require('packer').startup(function()
     use { 'nvim-lua/completion-nvim'}               -- auto-completion
     use { 'p00f/nvim-ts-rainbow'}                   -- rainbow brackets
     use { 'glepnir/indent-guides.nvim' }            -- indent guides
-    -- use { 'norcalli/snippets.nvim' }                -- code snippets
 
-
+    use {                                           -- git file comparison 
+        'lewis6991/gitsigns.nvim',
+        requires = {
+          'nvim-lua/plenary.nvim'
+        },
+        config = function()
+          require('gitsigns').setup()
+        end
+    }
     use { 'tjdevries/nlua.nvim' }                   -- LUA dev
     
     use 'tpope/vim-dispatch'                        -- asynchronous adapters
-    -- use 'tpope/vim-fugitive'                        -- git integration
     
 end)

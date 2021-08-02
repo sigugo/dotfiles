@@ -48,9 +48,10 @@ key_mapper('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
 key_mapper('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>')
 --  key_mapper('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
 key_mapper('n', 'K', ':lua require"lspsaga.hover".render_hover_doc()<CR>')
+key_mapper('n', '<leader>rn', ':lua require"lspsaga.rename".rename()<CR>')
 key_mapper('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
 key_mapper('n', '<leader>ca', ':Lspsaga code_action<CR>')
-key_mapper('n', '<leader>rn', ':Lspsaga rename<CR>')
+-- key_mapper('n', '<leader>rn', ':Lspsaga rename<CR>')
 
 -- Telescope
 key_mapper('n', '<C-p>', ':lua require"telescope.builtin".find_files()<CR>')
