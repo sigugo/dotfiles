@@ -17,3 +17,9 @@ end
 -- function execute(...)
 --     vim.api.nvim_command(...)
 -- end
+local function prerequire(...)
+   local status, lib = pcall(require, ...)
+   if status then return lib end
+   return nil
+end
+

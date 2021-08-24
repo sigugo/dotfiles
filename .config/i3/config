@@ -128,7 +128,7 @@ bindsym $mod+M bar mode toggle
 
 ## Autostart
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id picom --xrender-sync-fence --no-fading-destroyed-argb --no-fading-openclose  --fade-in-step=1.0  --fade-out-step=1.0 --menu-opacity=1.0
+# exec --no-startup-id picom --xrender-sync-fence --no-fading-destroyed-argb --no-fading-openclose  --fade-in-step=1.0  --fade-out-step=1.0 --menu-opacity=1.0
 exec --no-startup-id fbxkb
 exec --no-startup-id pasystray
 exec --no-startup-id copyq 

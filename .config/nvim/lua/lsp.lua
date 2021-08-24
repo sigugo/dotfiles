@@ -28,7 +28,7 @@ require'lspinstall'.post_install_hook = function ()
 end
 
 local lspconfig = require'lspconfig'
-local completion = require'completion'
+-- local completion = require'completion'
 
 local on_attach = function(client, bufnr)
     
@@ -37,8 +37,8 @@ local on_attach = function(client, bufnr)
     
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc') 
     
-    require('completion').on_attach()
-    completion.on_attach(client)
+    -- require('completion').on_attach()
+    -- completion.on_attach(client)
 
 end
 
@@ -55,6 +55,6 @@ require('nlua.lsp.nvim').setup(require('lspconfig'), {
   on_attach = on_attach,
 })
 
-lspconfig.gopls.setup{ on_attach=require'completion'.on_attach }
-lspconfig.pyright.setup{ on_attach=require'completion'.on_attach }
--- lspconfig.pyright.setup{ on_attach = on_attach, }
+lspconfig.gopls.setup{ on_attach = on_attach, }
+lspconfig.pyright.setup{ on_attach = on_attach, }
+lspconfig.pyright.setup{ on_attach = on_attach, }

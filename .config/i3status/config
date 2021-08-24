@@ -31,5 +31,6 @@ disk "/" {
 
 cpu_temperature 0 {
         format = "T: %degrees °C"
+        max_threshold = 85
         path = "/sys/devices/platform/nct6775.2592/hwmon/hwmon?/temp7_input"
 }
