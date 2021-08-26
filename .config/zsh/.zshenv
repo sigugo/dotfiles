@@ -6,6 +6,7 @@
 
 
 source $HOME/.profile
+source $XDG_CONFIG_HOME/user-dirs.dirs
 
 export TERM='rxvt-256color'
 export DOTFILES="$HOME/src/dotfiles.git"
@@ -31,7 +32,7 @@ export SAVEHIST=10000                   # Maximum events in history file
 export TMUXP_CONFIGDIR="$XDG_CONFIG_HOME/tmuxp"
 export I3_CONFIG="$XDG_CONFIG_HOME/i3"
 export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
-# export SCREENSHOT="$HOME/Documents/images/screenshots"
+export SCREENSHOT="$HOME/Documents/images/screenshots"
 
 # fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
