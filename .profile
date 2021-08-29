@@ -17,10 +17,11 @@ export HISTFILESIZE="10000"
 export HISTTIMEFORMAT="%y-%m-%d.%T"
 
 
-export GOPATH="$HOME/go"
-export GOBIN="$HOME/go/bin"
+export GOPATH="$HOME/src/go"
+export GOBIN="$HOME/bin/go"
 export GOCACHE="$XDG_CACHE_HOME/go-build"
 
+export RUSTBIN="$HOME/.cargo/bin"
 
 export RANGER_LOAD_DEFAULT_RC=false
 export IDEA_JDK=/usr/lib/jvm/jdk-jetbrains
@@ -29,4 +30,4 @@ export PACMAN_OPTIONS=""
 export LSD_OPTIONS=""
 
 
-export PATH=$HOME/bin:$HOME/.config/local/bin:$HOME/.emacs.d/bin:$GOBIN:$PATH
+export PATH=$HOME/bin:$HOME/.config/local/bin:$HOME/.emacs.d/bin:$GOBIN:$RUSTBIN:$PATH

@@ -5,6 +5,14 @@ return require('packer').startup({
     function()
         -- self update
         use { 'wbthomason/packer.nvim', opt=true }
+
+        -- tree browser
+        use {
+            'kyazdani42/nvim-tree.lua',
+            requires = {
+                'kyazdani42/nvim-web-devicons'
+            }
+        }
    
         -- look
         use { 'folke/tokyonight.nvim' }
@@ -32,15 +40,6 @@ return require('packer').startup({
         }
 
         use { 'nvim-telescope/telescope-packer.nvim' }
-
-
-        -- tree browser
-        use {
-            'kyazdani42/nvim-tree.lua',
-            requires = {
-                'kyazdani42/nvim-web-devicons'
-            }
-        }
         
         use { 'phaazon/hop.nvim' }
 
@@ -71,9 +70,18 @@ return require('packer').startup({
         
         use { 'nvim-treesitter/playground' }
 
-        -- dev tools
+        -- languag support
 
         use { 'tjdevries/nlua.nvim' }
+
+        use {
+            'simrat39/rust-tools.nvim',
+            config = function()
+                require('rust-tools').setup({})
+            end
+        }
+        
+        -- dev tools
         
         use { 'tpope/vim-dispatch' }
         
@@ -111,13 +119,13 @@ return require('packer').startup({
             end
         }
 
-        use {
-            'blackCauldron7/surround.nvim',
-            opt = true,
-            config = function()
-                require('surround').setup()
-            end
-        }
+        -- use {
+        --     'blackCauldron7/surround.nvim',
+        --     opt = true,
+        --     config = function()
+        --         require('surround').setup()
+        --     end
+        -- }
 
     end,
     config = {

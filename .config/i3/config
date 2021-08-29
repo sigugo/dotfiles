@@ -168,5 +168,16 @@ for_window [class="steam_app_1222680"] floating enable
 
 ##exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/thorsten/.config/i3/workspace-1.json'"
 
-## Workspace Layout
-# exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/thorsten/.config/i3/workspace-1.json'"
+## Dev Workspace
+exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/thorsten/.config/i3/workspace-dev-stacked.json; workspace 1; append_layout /home/thorsten/.config/i3/workspace-foursplit.json'"
+# exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/thorsten/.config/i3/workspace-foursplit.json'"
+# exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/thorsten/.config/i3/workspace-dev.json'"
+exec --no-startup-id urxvt -cd $HOME/src -e vim
+exec --no-startup-id urxvt -title Run -cd $HOME/src
+exec --no-startup-id firefox-developer-edition
+
+## Default workspace
+exec --no-startup-id /usr/bin/urxvt -title DefaultTerm
+exec --no-startup-id /usr/bin/urxvt -title DefaultTerm
+exec --no-startup-id /usr/bin/urxvt -title DefaultTerm
+exec --no-startup-id /usr/bin/urxvt -title DefaultTerm

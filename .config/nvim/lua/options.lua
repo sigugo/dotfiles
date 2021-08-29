@@ -11,7 +11,7 @@ options('o', 'undodir', vim.fn.stdpath('config') .. '/undodir')
 options('o', 'undofile', true)
 options('o', 'incsearch', true)
 options('o', 'hidden', true)
-options('o', 'completeopt', 'menuone,noinsert,noselect')
+options('o', 'completeopt', 'menuone,noselect')
 
 options('b', 'autoindent', true)
 options('b', 'smartindent', true)
@@ -31,7 +31,7 @@ options('w', 'wrap', true)
 
 -- nvim-tree
 vim.g.nvim_tree_width = 35
-vim.g.nvim_tree_auto_open = 0
+vim.g.nvim_tree_auto_open = 1
 vim.g.nvim_tree_auto_close = 1
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_hide_dotfiles = 0

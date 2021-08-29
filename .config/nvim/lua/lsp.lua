@@ -55,6 +55,14 @@ require('nlua.lsp.nvim').setup(require('lspconfig'), {
   on_attach = on_attach,
 })
 
-lspconfig.gopls.setup{ on_attach = on_attach, }
-lspconfig.pyright.setup{ on_attach = on_attach, }
-lspconfig.pyright.setup{ on_attach = on_attach, }
+local nvim_lsp = require('lspconfig')
+local servers = { 'pyright', 'rust_analyzer', 'tsserver' }
+for _, lsp in ipairs(servers) do
+    nvim_lsp[lsp].setup {
+        on_attach = on_attach,
+        flags = {
+            debounce_text_changes = 150,
+        }
+      }
+end
+
