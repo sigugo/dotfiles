@@ -29,6 +29,8 @@ return require('packer').startup({
                 })
             end
         }
+        
+        use { 'yamatsum/nvim-cursorline' }
 
         -- fuzzy finder
         use { 

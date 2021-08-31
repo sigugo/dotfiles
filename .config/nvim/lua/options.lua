@@ -24,10 +24,11 @@ options('w', 'number', true)
 options('w', 'relativenumber', true)
 options('w', 'signcolumn', 'yes')
 options('w', 'wrap', true)
+options('o', 'cursorline', true)
 
--- vim.cmd [[set shortmess+=c]]
--- vim.g.completion_confirm_key = ""
--- vim.g.completion_matching_strategy_list = {'exact', 'substring', 'fuzzy'}
+vim.cmd [[set shortmess+=c]]
+vim.g.completion_confirm_key = ""
+vim.g.completion_matching_strategy_list = {'exact', 'substring', 'fuzzy'}
 
 -- nvim-tree
 vim.g.nvim_tree_width = 35
@@ -37,7 +38,9 @@ vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_hide_dotfiles = 0
 
 vim.g.nvim_tree_lint_lsp = 1
--- vim.g.nvim_tree_lsp_diagnostics = 1
+vim.g.nvim_tree_lsp_diagnostics = 1
+
+vim.g.nvim_tree_side = 'left'
 
 vim.g.nvim_tree_icons = {
   default= '',

@@ -21,6 +21,8 @@ URxvt.urgentOnBell: true
 URxvt.cursorBlink: false
 URxvt.cutchars: '"'().<>[]{|}
 Urxvt.urlLauncher: /usr/bin/firefox
+URxvt.matcher.button: 2
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&amp;@#-]*[\\w/-]
 
 !extensions
 !URxvt.perl-lib: ~/.config/urxvt/perl
