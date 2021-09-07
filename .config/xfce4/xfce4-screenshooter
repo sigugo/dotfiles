@@ -1,9 +1,9 @@
-app=gimp-2.10
+app=pinta
 last_user=
 screenshot_dir=file:/home/thorsten/Downloads
-action=4
+action=2
 delay=0
-region=1
+region=3
 show_mouse=0
 last_extension=png
 enable_imgur_upload=true
