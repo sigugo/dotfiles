@@ -52,8 +52,14 @@ return require('packer').startup({
         
         use { 'glepnir/lspsaga.nvim' }
         
-        use { 'hrsh7th/nvim-compe' }
-   
+        use {
+            "hrsh7th/nvim-cmp",
+            requires = {
+                "hrsh7th/vim-vsnip",
+                "hrsh7th/cmp-buffer",
+            }
+        }
+        
         -- treesitter
         use { 'nvim-treesitter/nvim-treesitter' }
 
@@ -78,6 +84,12 @@ return require('packer').startup({
 
         use {
             'simrat39/rust-tools.nvim',
+            requires = {
+                'mfussenegger/nvim-dap',
+                'nvim-lua/popup.nvim',
+                'nvim-lua/plenary.nvim',
+                'nvim-telescope/telescope.nvim'
+            },
             config = function()
                 require('rust-tools').setup({})
             end

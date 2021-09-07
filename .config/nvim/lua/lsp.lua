@@ -56,7 +56,10 @@ require('nlua.lsp.nvim').setup(require('lspconfig'), {
 })
 
 local nvim_lsp = require('lspconfig')
-local servers = { 'pyright', 'rust_analyzer', 'tsserver' }
+
+
+
+local servers = { 'pyright', 'tsserver', 'gopls'}
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach,
@@ -66,3 +69,20 @@ for _, lsp in ipairs(servers) do
       }
 end
 
+nvim_lsp.rust_analyzer.setup({
+    on_attach=on_attach,
+    settings = {
+        ["rust-analyzer"] = {
+            assist = {
+                importGranularity = "module",
+                importPrefix = "by_self",
+            },
+            cargo = {
+                loadOutDirsFromCheck = true
+            },
+            procMacro = {
+                enable = true
+            },
+        }
+    }
+})

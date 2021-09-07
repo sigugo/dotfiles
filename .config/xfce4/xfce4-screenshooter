@@ -1,9 +1,9 @@
-app=ristretto
+app=gimp-2.10
 last_user=
 screenshot_dir=file:/home/thorsten/Downloads
-action=2
+action=4
 delay=0
-region=3
+region=1
 show_mouse=0
 last_extension=png
 enable_imgur_upload=true
