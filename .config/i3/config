@@ -144,7 +144,7 @@ exec --no-startup-id fbxkb
 exec --no-startup-id pasystray
 exec --no-startup-id copyq 
 exec --no-startup-id nm-applet
-exec --no-startup-id blueberry-tray
+exec --no-startup-id blueman-applet
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id synergy-tray
 exec --no-startup-id pamac-tray
