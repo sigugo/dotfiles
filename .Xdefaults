@@ -35,21 +35,23 @@ URxvt.keysym.C-equal:     resize-font:reset
 URxvt.keysym.C-question:  resize-font:show
 
 ! look
-URxvt.font: xft:MesloLGSDZ Nerd Font Mono:size=12
-URxvt.boldFont: xft:MesloLGSDZ Nerd Font Mono:size=12:Bold
-! URxvt.font: xft:Hack Nerd Font Mono:size=12
-! URxvt.boldFont: xft:Hack Nerd Font Mono:size=12:Bold
+! URxvt.font: xft:MesloLGSDZ Nerd Font Mono:size=12
+! URxvt.boldFont: xft:MesloLGSDZ Nerd Font Mono:size=12:Bold
+! URxvt.font: xft:JetBrainsMonoNerd Font Mono:size=12
+! URxvt.boldFont: xft:JetBrainsMonoNerd Font Mono:size=12:Bold
+ URxvt.font: xft:Hack Nerd Font Mono:size=12
+ URxvt.boldFont: xft:Hack Nerd Font Mono:size=12:Bold
 ! URxvt.font: xft:Anonymice Nerd Font:size=10
 ! URxvt.boldFont: xft:Anonymice Nerd Font:size=10:Bold
 URxvt.letterSpace: -2
-URxvt.matcher.button: 1
+! URxvt.matcher.button: 1
 URxvt.geometry: 70x35
 URxvt.internalBorder: 1 
 URxvt.inheritPixmap: True
-URxvt.foreground:   #bea492
+! URxvt.foreground:   #bea492
 URxvt.depth: 32
 ! URxvt.background:   Black
-URxvt.cursorColor:  #bea492
+! URxvt.cursorColor:  #bea492
 URxvt.colorBD:      #bea492
 
 
@@ -138,4 +140,25 @@ URxvt.colorBD:      #bea492
 *.color14: #4abaaf
 *.color7: #acb0d0
 *.color15: #acb0d0
+
+URxvt.foreground: #a9b1d6
+URxvt.background: #1a1b26
+URxvt.cursorColor: #a9b1d6
+URxvt.borderColor: #1a1b26
+URxvt.color0: #1a1b26
+URxvt.color8: #4e5173
+URxvt.color1: #F7768E
+URxvt.color9: #F7768E
+URxvt.color2: #9ECE6A
+URxvt.color10: #9ECE6A
+URxvt.color3: #E0AF68
+URxvt.color11: #E0AF68
+URxvt.color4: #7AA2F7
+URxvt.color12: #7AA2F7
+URxvt.color5: #9a7ecc
+URxvt.color13: #9a7ecc
+URxvt.color6: #4abaaf
+URxvt.color14: #4abaaf
+URxvt.color7: #acb0d0
+URxvt.color15: #acb0d0
 

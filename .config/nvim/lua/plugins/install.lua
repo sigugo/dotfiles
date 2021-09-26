@@ -43,6 +43,7 @@ return require('packer').startup({
 
         use { 'nvim-telescope/telescope-packer.nvim' }
         
+        -- easy movement
         use { 'phaazon/hop.nvim' }
 
         -- LSP
@@ -57,6 +58,7 @@ return require('packer').startup({
             requires = {
                 "hrsh7th/vim-vsnip",
                 "hrsh7th/cmp-buffer",
+                "hrsh7th/cmp-nvim-lsp"
             }
         }
         
@@ -98,7 +100,13 @@ return require('packer').startup({
         -- dev tools
         
         use { 'tpope/vim-dispatch' }
-        
+        use { 'lewis6991/gitsigns.nvim',
+            requires = 
+                'nvim-lua/plenary.nvim',
+            config = function()
+                require('gitsigns').setup()
+            end
+        }
         use {
             'lukas-reineke/indent-blankline.nvim',
             config = function()

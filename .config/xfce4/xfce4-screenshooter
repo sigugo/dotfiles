@@ -1,7 +1,7 @@
-app=pinta
+app=ristretto
 last_user=
 screenshot_dir=file:/home/thorsten/Downloads
-action=2
+action=4
 delay=0
 region=3
 show_mouse=0

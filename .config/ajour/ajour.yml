@@ -11,8 +11,8 @@ addons:
       - MythicDungeonTools
   release_channels:
     Retail:
-      RUF: Stable
       BigWigs: Stable
+      RUF: Stable
   delete_saved_variables: false
 theme: Dark
 column_config:

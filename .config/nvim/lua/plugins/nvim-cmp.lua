@@ -19,7 +19,9 @@ cmp.setup({
 },
   sources = {
       { name = 'nvim_lsp' },
+      { name = 'nvim_lua' },
       { name = 'rust_analyzer' },
+      { name = 'rust_tools' },
       { name = 'vsnip' },
       { name = 'path' },
       { name = 'buffer' },
