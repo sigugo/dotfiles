@@ -33,7 +33,7 @@ kmap('v', '<leader>p', '"+p')
 -- LSP
 kmap('n', '<leader>ldn', ':lua vim.lsp.diagnostic.goto_next()<CR>')
 kmap('n', '<leader>ldp', ':lua vim.lsp.diagnostic.goto_prev()<CR>')
--- kmap('n', '<leader>lds', ':Lspsaga show_line_diagnostics <CR>')
+kmap('n', '<leader>lds', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
 kmap('n', '<leader>lgd', ':lua vim.lsp.buf.definition()<CR>zz')
 kmap('n', '<leader>lgD', ':lua vim.lsp.buf.declaration()<CR>')
 kmap('n', '<leader>lgi', ':lua vim.lsp.buf.implementation()<CR>')
@@ -43,10 +43,8 @@ kmap('n', '<leader>lgr', ':lua vim.lsp.buf.references()<CR>')
 kmap('n', '<leader>lgt', ':lua vim.lsp.buf.type_definition()<CR>')
 kmap('n', '<leader>lk', ':lua vim.lsp.buf.hover()<CR>')
 kmap('n', '<leader>lrn', ':lua vim.lsp.buf.rename()<CR>')
--- kmap('n', '<leader>lrn', ':lua require"lspsaga.rename".rename()<CR>')
+kmap('n', '<leader>lca', ':lua vim.lsp.buf.code_action()<CR>')
 kmap('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
-kmap('n', '<space>ca', ':lua vim.lsp.buf.code_action()<CR>')
--- kmap('n', '<leader>lca', ':Lspsaga code_action<CR>')
 
 
 -- Plugins
@@ -57,8 +55,11 @@ kmap('n', '<leader>ff', ':lua require"telescope.builtin".find_files()<CR>')
 kmap('n', '<leader>fg', ':lua require"telescope.builtin".live_grep()<CR>')
 kmap('n', '<leader>fg', ':lua require"telescope.builtin".live_grep()<CR>')
 
+-- -- Troubles
+kmap('', '<leader>tt', ':TroubleToggle<CR>')
+
 -- -- Nvim-Tree
-kmap('', '<leader>tt', ':NvimTreeToggle<CR>')
+kmap('', '<leader>rr', ':NvimTreeToggle<CR>')
 
 -- -- Gitsigns
 kmap('', '<leader>gb', ':Gitsigns blame_line<CR>')

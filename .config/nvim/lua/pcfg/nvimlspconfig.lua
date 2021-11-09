@@ -1,14 +1,25 @@
 local nvim_lsp = require('lspconfig')
 
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
+-- Use an on_attach for a consistent setup experience 
 local on_attach = function(client, bufnr)
+  print('Attaching to ' .. client.name)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+      underline = true,
+      virtual_text = true,
+      signs = true,
+      update_in_insert = false,
+    }
+  )
 
   -- Enable completion triggered by <c-x><c-o>
   -- buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 end
+
+
 
 local servers = { 'pyright', 'rust_analyzer', 'gopls'}
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -19,11 +30,34 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
     flags = {
       debounce_text_changes = 150,
-    }
+    },
+    settings = {
+        ['rust_analyzer'] = {
+           assist = {
+               importGranularity = "module",
+               importPrefix = "by_self",
+           },
+           cargo = {
+               loadOutDirsFromCheck = true
+           },
+           procMacro = {
+               enable = true
+           },
+           checkOnSave = {
+               command = 'clippy'
+           },
+        }
+     }
   }
 end
 
-
+require('nlua.lsp.nvim').setup(require('lspconfig'), {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = {
+      debounce_text_changes = 150,
+    },
+  })
 -- -- Sumneko needs some special attention
 -- local system_name
 -- if vim.fn.has("mac") == 1 then

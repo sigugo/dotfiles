@@ -39,6 +39,13 @@ Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 -- -- lsp configuration
 Plug('neovim/nvim-lspconfig')
 
+-- --  show status for code issues
+Plug('folke/trouble.nvim')
+
+-- -- specific languages
+Plug('tjdevries/nlua.nvim')
+-- Plug('zchee/nvim-go', { ['do'] = 'make' })
+
 -- -- programing completion and snippets
 Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
