@@ -9,6 +9,8 @@ new_window 1pixel
 ## Handle some window roles as floating, like expected
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
+### Special Windows
+for_window [class="Steam" instance="Steam"] floating enable
 
 ## Fonts
 font pango:Hack Nerd Font Mono 8, FontAwesome 8

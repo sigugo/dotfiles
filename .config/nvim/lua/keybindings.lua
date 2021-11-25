@@ -46,6 +46,8 @@ kmap('n', '<leader>lrn', ':lua vim.lsp.buf.rename()<CR>')
 kmap('n', '<leader>lca', ':lua vim.lsp.buf.code_action()<CR>')
 kmap('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
 
+-- Format
+kmap('n', '<leader>ft', ':Neoformat<CR>')
 
 -- Plugins
 
