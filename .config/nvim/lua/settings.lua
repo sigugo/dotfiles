@@ -32,15 +32,16 @@ opt('w', 'wrap', true)
 opt('o', 'cursorline', true)
 
 -- Tokyo Night Colorscheme settings
-opt('g', 'tokyonight_style', 'night')
-opt('g', 'tokyonight_transparent', true)
-opt('g', 'tokyonight_hide_inactive_statusline', true)
-opt('g', 'tokyonight_italic_keywords', true)
-opt('g', 'tokyonight_italic_comments', true)
-opt('g', 'tokyonight_italic_variables', false)
+-- opt('g', 'tokyonight_style', 'night')
+-- opt('g', 'tokyonight_transparent', true)
+-- opt('g', 'tokyonight_hide_inactive_statusline', true)
+-- opt('g', 'tokyonight_italic_keywords', true)
+-- opt('g', 'tokyonight_italic_comments', true)
+-- opt('g', 'tokyonight_italic_variables', false)
 
-vim.cmd('colorscheme tokyonight')
-vim.cmd('let g:lightline = {"colorscheme" : "tokyonight"}')
+-- vim.cmd('colorscheme tokyonight')
+vim.cmd('colorscheme kanagawa')
+-- vim.cmd('let g:lightline = {"colorscheme" : "tokyonight"}')
 
 
 vim.cmd('set shortmess+=c')

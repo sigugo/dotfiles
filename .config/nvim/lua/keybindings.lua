@@ -19,10 +19,10 @@ kmap('', '<leader>bd', ':bd<CR>')
 kmap('', '<leader>bq', ':bd!<CR>')
 
 -- Quick escapes
-kmap('i', 'jk', '<ESC>')
-kmap('i', 'JK', '<ESC>')
-kmap('i', 'jK', '<ESC>')
-kmap('i', 'Jk', '<ESC>')
+-- kmap('i', 'jk', '<ESC>')
+-- kmap('i', 'JK', '<ESC>')
+-- kmap('i', 'jK', '<ESC>')
+-- kmap('i', 'Jk', '<ESC>')
 
 -- Interact with the OS Clipboard
 kmap('n', '<leader>y', '"+yy')
@@ -64,9 +64,9 @@ kmap('', '<leader>tt', ':TroubleToggle<CR>')
 kmap('', '<leader>rr', ':NvimTreeToggle<CR>')
 
 -- -- Gitsigns
-kmap('', '<leader>gb', ':Gitsigns blame_line<CR>')
-kmap('', '<leader>gt', ':Gitsigns toggle_signs<CR>')
-kmap('', '<leader>gp', ':Gitsigns preview_hunk<CR>')
-kmap('', '<leader>gi', ':Gitsigns next_hunk<CR>')
-kmap('', '<leader>go', ':Gitsigns prev_hunk<CR>')
+kmap('', '<leader>gsb', ':Gitsigns blame_line<CR>')
+kmap('', '<leader>gst', ':Gitsigns toggle_signs<CR>')
+kmap('', '<leader>gsp', ':Gitsigns preview_hunk<CR>')
+kmap('', '<leader>gsi', ':Gitsigns next_hunk<CR>')
+kmap('', '<leader>gso', ':Gitsigns prev_hunk<CR>')
 kmap('', '<leader>gu', ':Gitsigns reset_hunk<CR>')

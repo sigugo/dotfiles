@@ -15,15 +15,20 @@ vim.call('plug#begin', '~/.config/nvim/plugins')
 
 -- -- Plugins
 
--- -- Tokyo Night color scheme
+-- -- Impatient
+Plug('lewis6991/impatient.nvim')
+
+-- -- Color Schemes
 Plug('folke/tokyonight.nvim', { ['branch'] = 'main' })
--- Plug('ghifarit53/tokyonight-vim', { ['branch'] = 'main' })
+Plug('rebelot/kanagawa.nvim')
 
 -- -- DevIcon Support
 Plug('kyazdani42/nvim-web-devicons')
 
 -- -- Status Line
 Plug('nvim-lualine/lualine.nvim')
+Plug('akinsho/bufferline.nvim')
+
 
 -- -- nvim-tree
 Plug('kyazdani42/nvim-tree.lua')
@@ -35,6 +40,7 @@ Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' })
 
 -- -- treesitter highlighting
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
+Plug('nvim-lua/lsp_extensions.nvim')
 
 -- -- lsp configuration
 Plug('neovim/nvim-lspconfig')
@@ -55,9 +61,13 @@ Plug('hrsh7th/cmp-cmdline')
 Plug('hrsh7th/cmp-vsnip')
 Plug('hrsh7th/vim-vsnip')
 Plug('sbdchd/neoformat')
+Plug('mhartington/formatter.nvim')
 
 -- End vim-plug
 vim.call('plug#end')
+
+-- Impatient Plugin Loading
+require('impatient')
 
 -- Plugin Configurations
 require('pcfg.nvimtreesitter')
@@ -66,3 +76,4 @@ require('pcfg.telescope')
 require('pcfg.nvimcmp')
 require('pcfg.nvimlspconfig')
 require('pcfg.nvimlualine')
+require('pcfg.bufferlinenvim')
