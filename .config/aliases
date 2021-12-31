@@ -21,7 +21,7 @@ alias tstamp='date +%Y%m%d%H%M%S'
 
 ### git sync for dotfiles and todo
 alias dotfiles='/usr/bin/git --git-dir=$DOTFILES --work-tree=$HOME'
-alias dotfiles-commit='dotfiles add -u && config commit -m "Quick Commit $(date +%Y-%m-%d.%H:%M:%S)"'
+alias dotfiles-commit='dotfiles add -u && dotfiles commit -m "Quick Commit $(date +%Y-%m-%d.%H:%M:%S)"'
 alias dotfiles-push='dotfiles push -u origin master'
 alias tasks='nvim ~/todo.md'
 alias todo='/usr/bin/git --git-dir=$XDG_CONFIG_HOME/todo/ --work-tree=$HOME'
