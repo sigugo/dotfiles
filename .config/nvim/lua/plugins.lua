@@ -29,39 +29,41 @@ Plug('kyazdani42/nvim-web-devicons')
 Plug('nvim-lualine/lualine.nvim')
 Plug('akinsho/bufferline.nvim')
 
--- -- nvim-tree
-Plug('kyazdani42/nvim-tree.lua')
-
 -- -- telescope fuzzy finder with native fzf 
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 'make' })
 
+-- -- gitSigns
+Plug('lewis6991/gitsigns.nvim')
+
 -- -- treesitter highlighting
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
-Plug('nvim-lua/lsp_extensions.nvim')
 
 -- -- lsp configuration
 Plug('neovim/nvim-lspconfig')
+Plug('nvim-lua/lsp_extensions.nvim')
 
 -- --  show status for code issues
 Plug('folke/trouble.nvim')
 
 -- -- specific languages
 Plug('tjdevries/nlua.nvim')
+Plug('plasticboy/vim-markdown')
 -- Plug('zchee/nvim-go', { ['do'] = 'make' })
 
 -- -- programing completion, snippets, formatting ...
+Plug('lukas-reineke/indent-blankline.nvim')
+Plug('sbdchd/neoformat')
+Plug('mhartington/formatter.nvim')
+Plug('hrsh7th/vim-vsnip')
+
 Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('hrsh7th/cmp-buffer')
 Plug('hrsh7th/cmp-path')
 Plug('hrsh7th/cmp-cmdline')
 Plug('hrsh7th/cmp-vsnip')
-Plug('hrsh7th/vim-vsnip')
-Plug('lukas-reineke/indent-blankline.nvim')
-Plug('sbdchd/neoformat')
-Plug('mhartington/formatter.nvim')
 
 -- End vim-plug
 vim.call('plug#end')
@@ -71,9 +73,9 @@ require('impatient')
 
 -- Plugin Configurations
 require('pcfg.nvimtreesitter')
-require('pcfg.nvimtreelua')
 require('pcfg.telescope')
 require('pcfg.nvimcmp')
 require('pcfg.nvimlspconfig')
 require('pcfg.nvimlualine')
-require('pcfg.bufferlinenvim')
+require('pcfg.gitsignsnvim')
+require('pcfg.formatternvim')
