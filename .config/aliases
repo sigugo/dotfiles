@@ -8,12 +8,14 @@ alias l='lsd $LSD_OPTIONS -l'
 alias ll='lsd $LSD_OPTIONS -lA'
 alias lspp='ls++ --potsf'
 alias cat='bat'
+alias pping='prettyping'
 alias yay='yay $PACMAN_OPTIONS'
 alias paru='paru $PACMAN_OPTIONS'
 alias pacman='pacman $PACMAN_OPTIONS'
+alias update='yay -Syu'
 alias sshinsecure='ssh -oKexAlgorithms=+diffie-hellman-group1-sha1'
 
-## fixes
+## fix non XDG
 alias tmux='tmux -f "$TMUX_CONFIG_HOME/tmux.conf"'
 
 ### helpers
@@ -47,11 +49,9 @@ alias trssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChe
 alias tsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no kace_support@localhost -t -- screen -R'
 alias trsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no root@localhost -t -- screen -R'
 alias readdocs='ranger $HOME/Documents/Text/Manuals'
-# alias iamgroot='cat $HOME/Documents/notes/kace/KnowHow/iamgroot.txt'
 alias iamgroot='cat $XDG_DOCUMENTS_DIR/notes/kace/KnowHow/iamgroot.md'
-# alias iamgroot='lookatme $XDG_DOCUMENTS_DIR/notes/kace/KnowHow/iamgroot.md'
 
-### game streaming
+### game streams
 alias streamlink='streamlink -p mpv --twitch-disable-ads'
 alias jorbs='streamlink https://twitch.tv/joinrbs best'
 
