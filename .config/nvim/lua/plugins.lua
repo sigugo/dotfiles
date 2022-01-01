@@ -56,7 +56,9 @@ Plug('plasticboy/vim-markdown')
 Plug('lukas-reineke/indent-blankline.nvim')
 Plug('sbdchd/neoformat')
 Plug('mhartington/formatter.nvim')
+
 Plug('hrsh7th/vim-vsnip')
+Plug('hrsh7th/vim-vsnip-integ')
 
 Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')

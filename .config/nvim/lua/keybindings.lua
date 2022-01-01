@@ -11,10 +11,12 @@ local function kmap(mode, key, result)
     )
 end
 
-
 -- Buffers
 kmap('', '<leader>bp', ':bprev<CR>')
 kmap('', '<leader>bn', ':bnext<CR>')
+kmap('n', '<Tab>', ':bnext<CR>')
+kmap('n', '<S-Tab>', ':bprev<CR>')
+
 kmap('', '<leader>bd', ':bd<CR>')
 kmap('', '<leader>bq', ':bd!<CR>')
 
@@ -56,6 +58,10 @@ kmap('n', '<C-p>', ':lua require"telescope.builtin".find_files()<CR>')
 kmap('n', '<leader>ff', ':lua require"telescope.builtin".find_files()<CR>')
 kmap('n', '<leader>fg', ':lua require"telescope.builtin".live_grep()<CR>')
 kmap('n', '<leader>fg', ':lua require"telescope.builtin".live_grep()<CR>')
+
+-- -- Vim Vsnip
+kmap('i', '<C-j>', ':lua require"telescope.builtin".find_files()<CR>')
+kmap('s', '<C-j>', ':lua require"telescope.builtin".find_files()<CR>')
 
 -- -- Troubles
 kmap('', '<leader>tt', ':TroubleToggle<CR>')

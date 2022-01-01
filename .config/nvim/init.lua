@@ -15,8 +15,9 @@ end
 
 api.nvim_exec('autocmd BufWrite *.lua,*vim call v:lua.Flush()', false)
 
+require('keybindings')
+
 require('plugins')
 
 require('settings')
 
-require('keybindings')
