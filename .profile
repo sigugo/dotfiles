@@ -18,7 +18,6 @@ export WINEPREFIX=$XDG_CONFIG_HOME/wine
 export TMUX_CONFIG_HOME="$XDG_CONFIG_HOME/tmux"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export FPATH=$HOME/.zfunc:$FPATH
 
 export CARGO_HOME="$XDG_CONFIG_HOME/cargo"
 export RUSTBIN="$CARGO_HOME/bin"
