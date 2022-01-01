@@ -16,8 +16,8 @@ setopt autocd extendedglob
 unsetopt beep nomatch
 bindkey -v
 
-ZSH_SHARED_PLUGIN_DIR=/usr/share/zsh/plugins
-ZVM_VI_EDITOR=nvim
+#ZSH_SHARED_PLUGIN_DIR=/usr/share/zsh/plugins
+# ZVM_VI_EDITOR=nvim
 
 ## Key Bindings
 bindkey '^A' beginning-of-line
