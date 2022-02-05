@@ -47,9 +47,19 @@ Plug('nvim-lua/lsp_extensions.nvim')
 -- --  show status for code issues
 Plug('folke/trouble.nvim')
 
+-- -- popup vim.ui.select
+Plug('RishabhRD/popfix')
+Plug('hood/popui.nvim')
+
 -- -- specific languages
 Plug('tjdevries/nlua.nvim')
-Plug('plasticboy/vim-markdown')
+-- Plug('plasticboy/vim-markdown')
+Plug('SidOfc/mkdx')
+-- Plug('ixru/nvim-markdown')
+Plug('mtdl9/vim-log-highlighting')
+Plug('rust-lang/rust.vim')
+Plug('simrat39/rust-tools.nvim')
+Plug('ray-x/go.nvim')
 -- Plug('zchee/nvim-go', { ['do'] = 'make' })
 
 -- -- programing completion, snippets, formatting ...
@@ -67,6 +77,15 @@ Plug('hrsh7th/cmp-path')
 Plug('hrsh7th/cmp-cmdline')
 Plug('hrsh7th/cmp-vsnip')
 
+Plug('rafamadriz/friendly-snippets')
+
+Plug('onsails/lspkind-nvim')
+
+Plug('stevearc/aerial.nvim')
+
+-- -- Tabular formatting
+Plug('godlygeek/tabular')
+
 -- End vim-plug
 vim.call('plug#end')
 
@@ -82,3 +101,6 @@ require('gitsigns').setup()
 require('pcfg.formatternvim')
 require('pcfg.nvimlualine')
 require("bufferline").setup{}
+require('pcfg.rusttools')
+vim.ui.select = require"popui.ui-overrider"
+require("go").setup()

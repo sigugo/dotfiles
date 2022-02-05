@@ -97,8 +97,8 @@ colors:
 #  color: '0xffffff'
 
 # Background opacity
-background_opacity: 1.0
-
+# background_opacity: 1.0
+window.opacity: 0.7
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
   #save_to_clipboard: false

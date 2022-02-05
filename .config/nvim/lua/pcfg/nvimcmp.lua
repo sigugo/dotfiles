@@ -1,4 +1,5 @@
-local cmp = require("cmp")
+local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 local feedkey = function(key, mode)
 	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
@@ -60,6 +61,20 @@ cmp.setup({
 	}, {
 		{ name = "buffer" },
 	}),
+
+    formatting = {
+    format = lspkind.cmp_format({
+        with_text = false, -- do not show text alongside icons
+        maxwidth = 50, -- prevent the popup from showing more than provided character      s (e.g 50 will not show more than 50 characters)
+        -- The function below will be called before any actual modifications from lsp      kind
+        -- so that you can provide more controls on popup customization. (See [#30](h      ttps://github.com/onsails/lspkind-nvim/pull/30))
+        before = function (entry, vim_item)
+        -- other stuff
+            return vim_item
+        end
+    })
+}
+
 })
 
 -- Use buffer source for `/`.
