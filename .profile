@@ -40,5 +40,7 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$XDG_CONFIG_HOME/local/lib"
 
 export PATH=$HOME/bin:$HOME/.config/bin:$HOME/.local/bin:$HOME/.config/local/bin:$GOBIN:$RUSTBIN:$PATH
 
+export DEBUGINFOD_URLS="https://debuginfod.elfutils.org/"
+
 source $XDG_CONFIG_HOME/aliases
 
