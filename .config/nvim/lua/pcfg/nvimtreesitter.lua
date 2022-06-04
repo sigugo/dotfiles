@@ -4,7 +4,7 @@ require'nvim-treesitter.configs'.setup({
   },
 
   indent = {
-    enabled = false,
+    enabled = true,
   },
 
   textobjects = {
@@ -27,3 +27,7 @@ require'nvim-treesitter.configs'.setup({
     max_file_lines = 1000 -- Do not enable for files with more than 1000 lines, int
   },
 })
+
+
+-- vim.cmd[[set foldmethod=expr]]
+-- vim.cmd[[set foldexpr=nvim_treesitter#foldexpr()]]
