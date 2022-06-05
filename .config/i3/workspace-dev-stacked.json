@@ -23,7 +23,7 @@
             "percent": 1,
             "swallows": [
                {
-                "class": "^URxvt$",
+                "class": "^Alacritty$",
                 "title": "vim"
               }
             ],
@@ -99,8 +99,8 @@
                     "percent": 1,
                     "swallows": [
                        {
-                        "class": "^URxvt$",
-                        "instance": "^urxvt$",
+                        "class": "^Alacritty$",
+                        "instance": "^Alacritty$",
                         "title": "Run"
                        }
                     ],

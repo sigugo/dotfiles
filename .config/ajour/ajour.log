@@ -1,10 +1,10 @@
-17:05:30.849 [ajour][INFO] Ajour 1.0.1 has started.
-17:05:30.854 [ajour::gui][DEBUG] config loaded:
+19:10:55.814 [ajour][INFO] Ajour 1.3.2 has started.
+19:10:55.818 [ajour::gui][DEBUG] config loaded:
 Config {
     wow: Wow {
         directory: None,
         directories: {
-            Retail: "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_",
+            Retail: "/home/thorsten/GamesNVMe/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_",
         },
         flavor: Retail,
     },
@@ -17,8 +17,8 @@ Config {
         },
         release_channels: {
             Retail: {
-                "BigWigs": Stable,
                 "RUF": Stable,
+                "BigWigs": Stable,
             },
         },
         delete_saved_variables: false,
@@ -153,34 +153,56 @@ Config {
     backup_directory: None,
     backup_addons: false,
     backup_wtf: false,
+    backup_config: false,
+    backup_screenshots: false,
+    backup_fonts: false,
     hide_ignored_addons: false,
     self_update_channel: Stable,
     weak_auras_account: {
         Retail: "JERUSALEMX",
     },
     alternating_row_colors: true,
+    is_keybindings_enabled: true,
     language: English,
     catalog_source: Some(
         Curse,
     ),
     auto_update: false,
     compression_format: Zip,
+    zstd_compression_level: 0,
 }
-17:05:30.855 [ajour::gui][DEBUG] antialiasing: true
-17:05:30.948 [ajour_core::theme][DEBUG] loading user themes
-17:05:30.948 [ajour_core::utility][DEBUG] checking for application update
-17:05:30.950 [ajour_core::fs::theme][DEBUG] loaded 0 user themes
-17:05:30.963 [ajour::gui::update][DEBUG] Message::CachesLoaded(error: false)
-17:05:30.963 [ajour::gui::update][DEBUG] Message::ThemesLoaded(0 themes)
-17:05:30.965 [ajour::gui::update][DEBUG] Message::Parse
-17:05:30.968 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_/Interface/AddOns"
-17:05:30.968 [ajour_core::parse][DEBUG] Retail - parsing addons folder
-17:05:30.968 [ajour_core::parse][DEBUG] Retail - 132 folders in AddOns directory to parse
-17:05:30.969 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Retail, is_installed: true)
-17:05:30.972 [ajour_core::parse][DEBUG] Retail - 132 fingerprints: 132 cached, 0 calculated, 0 added, 0 removed
-17:05:30.972 [ajour::gui::update][DEBUG] Message::ListWeakAurasAccounts(Retail, num_accounts: 1)
-17:05:31.008 [ajour_core::parse][DEBUG] Retail - 132 addon folders successfully parsed from '.toc'
-17:05:31.008 [ajour_core::parse][DEBUG] Retail - 2 valid cache entries retrieved
-17:05:31.008 [ajour_core::parse][DEBUG] Retail - 130 unique fingerprints to check against curse api
-17:05:31.469 [ajour::gui::update][DEBUG] Message::LatestRelease(Some("1.3.1"))
-17:05:32.078 [ajour::gui::update][DEBUG] Message::ParsedAuras(Retail, num_auras: 40)
+19:10:55.819 [ajour::gui][DEBUG] antialiasing: false
+19:10:55.876 [ajour_core::utility][DEBUG] checking for application update
+19:10:55.876 [ajour_core::theme][DEBUG] loading user themes
+19:10:55.878 [ajour_core::fs::theme][DEBUG] loaded 0 user themes
+19:10:56.113 [ajour_core::catalog][DEBUG] Downloaded latest catalog from https://raw.githubusercontent.com/ajour/catalog/main/catalog-0.2.0.json
+19:10:56.131 [ajour::gui::update][DEBUG] Message::ThemesLoaded(0 themes)
+19:10:56.131 [ajour::gui::update][DEBUG] Message::CachesLoaded(error: false)
+19:10:56.132 [ajour::gui::update][DEBUG] Message::Parse
+19:10:56.132 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/GamesNVMe/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_/Interface/AddOns"
+19:10:56.132 [ajour_core::parse][DEBUG] Retail - parsing addons folder
+19:10:56.132 [ajour_core::parse][DEBUG] Retail - 145 folders in AddOns directory to parse
+19:10:56.145 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Retail, is_installed: true)
+19:10:56.156 [ajour_core::parse][DEBUG] Retail - 145 fingerprints: 117 cached, 28 calculated, 0 added, 0 removed
+19:10:56.162 [ajour::gui::update][DEBUG] Message::ListWtfAccounts(Retail, num_accounts: 2)
+19:10:56.168 [ajour_core::parse][DEBUG] Retail - 145 addon folders successfully parsed from '.toc'
+19:10:56.168 [ajour_core::parse][DEBUG] Retail - 6 valid cache entries retrieved
+19:10:56.168 [ajour_core::parse][DEBUG] Retail - 136 unique fingerprints to check against curse api
+19:10:56.371 [ajour::gui::update][DEBUG] Message::CatalogDownloaded(16708 addons in catalog)
+19:10:56.462 [ajour::gui::update][DEBUG] Message::LatestRelease(Some("1.3.2"))
+19:10:57.286 [ajour::gui::update][DEBUG] Message::ParsedAuras(Retail, num_auras: 36)
+19:10:58.897 [ajour_core::parse][DEBUG] Retail - Invalid status code 403 Forbidden for url https://addons-ecs.forgesvc.net/api/v2/addon curse returned an error
+19:10:59.052 [ajour_core::parse][DEBUG] Retail - 1 tukui packages fetched
+19:10:59.325 [ajour_core::parse][DEBUG] Retail - 15 wowi packages fetched
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 0 hub packages fetched
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 0 git packages fetched
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 0 addons built from curse packages
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 1 addons built from tukui packages
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 14 addons built from wowi packages
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 0 addons built from hub packages
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 0 addons built from git packages
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 112 unknown addon folders
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 127 addons successfully parsed
+19:10:59.639 [ajour::gui::update][DEBUG] Message::ParsedAddons(Retail, 127 addons)
+19:11:00.808 [ajour::gui::update][DEBUG] Interaction::ModeSelected(Catalog)
+19:11:03.613 [ajour::gui::update][DEBUG] Interaction::ModeSelected(Install)

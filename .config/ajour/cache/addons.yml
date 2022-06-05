@@ -2,7 +2,7 @@
 V1:
   Retail:
     - title: Venture Plan
-      repository: TownlongYak
+      repository: Hub
       repository_id: "35"
       primary_folder_id: VenturePlan
       folder_names:
@@ -16,8 +16,58 @@ V1:
       primary_folder_id: TomTom
       folder_names:
         - TomTom
-        - TomTom
-        - TomTom
-      modified: "2021-07-14T16:50:57.019983053Z"
+      modified: "2022-03-02T08:15:08.110955819Z"
       external_release_id:
-        Version: v3.0.2
+        Version: v3.0.6
+    - title: Prat 3.0
+      repository: WowI
+      repository_id: "10783"
+      primary_folder_id: Prat-3.0
+      folder_names:
+        - Prat-3.0
+        - Prat-3.0_Libraries
+      modified: "2022-05-18T10:14:46.576904122Z"
+      external_release_id:
+        Version: 3.9.2c
+    - title: Azeroth Auto Pilot
+      repository: WowI
+      repository_id: "25775"
+      primary_folder_id: AAP-Core
+      folder_names:
+        - AAP-Core
+        - AAP-EasternKingdoms
+        - AAP-Shadowlands
+      modified: "2022-05-18T10:14:46.750616253Z"
+      external_release_id:
+        Version: V9.059
+    - title: "Masque: Caith"
+      repository: WowI
+      repository_id: "8869"
+      primary_folder_id: Masque_Caith
+      folder_names:
+        - Masque_Caith
+      modified: "2022-06-01T07:37:13.658126639Z"
+      external_release_id:
+        Version: 9.2.5
+    - title: "Masque: LiteStep"
+      repository: WowI
+      repository_id: "8882"
+      primary_folder_id: Masque_LiteStep
+      folder_names:
+        - Masque_LiteStep
+      modified: "2022-06-01T07:37:13.685244398Z"
+      external_release_id:
+        Version: 9.2.5
+    - title: WeakAuras 2
+      repository: WowI
+      repository_id: "24910"
+      primary_folder_id: WeakAuras
+      folder_names:
+        - WeakAuras
+        - WeakAurasArchive
+        - WeakAurasModelPaths
+        - WeakAurasOptions
+        - WeakAurasTemplates
+      modified: "2022-06-01T07:37:14.696033095Z"
+      external_release_id:
+        Version: 4.0.2

@@ -8,23 +8,26 @@ alias l='lsd $LSD_OPTIONS -l'
 alias ll='lsd $LSD_OPTIONS -lA'
 alias lspp='ls++ --potsf'
 alias cat='bat'
+alias pping='prettyping'
 alias yay='yay $PACMAN_OPTIONS'
+alias paru='paru $PACMAN_OPTIONS'
 alias pacman='pacman $PACMAN_OPTIONS'
 alias update='yay -Syu'
-alias ccat='highlight --out-format=ansi'
-alias emacs='emacs -nw'
 alias sshinsecure='ssh -oKexAlgorithms=+diffie-hellman-group1-sha1'
+
+## fix non XDG
+alias tmux='tmux -f "$TMUX_CONFIG_HOME/tmux.conf"'
 
 ### helpers
 alias tstamp='date +%Y%m%d%H%M%S'
 
 ### git sync for dotfiles and todo
-alias config='/usr/bin/git --git-dir=$DOTFILES --work-tree=$HOME'
-alias config-commit='config add -u && config commit -m "Quick Commit $(date +%Y-%m-%d.%H:%M:%S)"'
-alias config-push='config push -u origin master'
+alias dotfiles='/usr/bin/git --git-dir=$DOTFILES --work-tree=$HOME'
+alias dotfiles-commit='dotfiles add -u && dotfiles commit -m "Quick Commit $(date +%Y-%m-%d.%H:%M:%S)"'
+alias dotfiles-push='dotfiles push -u origin master'
 alias tasks='nvim ~/todo.md'
-alias todo='/usr/bin/git --git-dir=$HOME/.todo/ --work-tree=$HOME'
-alias update-todo='todo add todo.md && todo commit -m "Update $(date +%Y-%m-%d.%H:%M:%S)" && todo push -u origin'
+alias todo='/usr/bin/git --git-dir=$XDG_CONFIG_HOME/todo/ --work-tree=$HOME'
+alias update-todo='todo add $HOME/todo.md && todo commit -m "Update $(date +%Y-%m-%d.%H:%M:%S)" && todo push -u origin'
 
 ### manage wine
 alias wineprocs='ps auxwww | egrep -iE "wine|\.exe" | grep -v grep'
@@ -46,12 +49,11 @@ alias trssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChe
 alias tsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no kace_support@localhost -t -- screen -R'
 alias trsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no root@localhost -t -- screen -R'
 alias readdocs='ranger $HOME/Documents/Text/Manuals'
-# alias iamgroot='cat $HOME/Documents/notes/kace/KnowHow/iamgroot.txt'
-alias iamgroot='cat $XDG_DOCUMENTS_DIR/notes/kace/KnowHow/iamgroot.txt'
+alias iamgroot='cat $XDG_DOCUMENTS_DIR/notes/kace/KnowHow/iamgroot.md'
 
-### games
-alias jorbs='/usr/bin/streamlink https://twitch.tv/joinrbs best'
-
+### game streams
+alias streamlink='streamlink -p mpv --twitch-disable-ads'
+alias jorbs='streamlink https://twitch.tv/joinrbs best'
 
 ### sumneko
 alias luamake='/home/thorsten/.config/cache/nvim/nlua/sumneko_lua/lua-language-server/3rd/luamake/luamake'

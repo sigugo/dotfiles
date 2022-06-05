@@ -1,5 +1,5 @@
 local nvim_lsp = require("lspconfig")
-local servers = { "jedi_language_server", "rust_analyzer", "zls", "clangd", "gopls" }
+local servers = { "jedi_language_server", "rust_analyzer", "zls", "clangd", "gopls", "sumneko_lua" }
 -- local servers = { "jedi_language_server", "rust_analyzer", "zls", "clangd" }
 
 -- global on_attach
@@ -30,13 +30,13 @@ local on_attach = function(client, bufnr)
 		},
 	})
 
-	require("aerial").on_attach(client, bufnr)
+	--require("aerial").on_attach(client, bufnr)
 
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>a", "<cmd>AerialToggle!<CR>", {})
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "{", "<cmd>AerialPrev<CR>", {})
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "}", "<cmd>AerialNext<CR>", {})
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "[[", "<cmd>AerialPrevUp<CR>", {})
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "]]", "<cmd>AerialNextUp<CR>", {})
+	--vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>a", "<cmd>AerialToggle!<CR>", {})
+	--vim.api.nvim_buf_set_keymap(bufnr, "n", "{", "<cmd>AerialPrev<CR>", {})
+	--vim.api.nvim_buf_set_keymap(bufnr, "n", "}", "<cmd>AerialNext<CR>", {})
+	--vim.api.nvim_buf_set_keymap(bufnr, "n", "[[", "<cmd>AerialPrevUp<CR>", {})
+	--vim.api.nvim_buf_set_keymap(bufnr, "n", "]]", "<cmd>AerialNextUp<CR>", {})
 
 	-- buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 end

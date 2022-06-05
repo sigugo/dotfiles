@@ -47,10 +47,10 @@ cmp.setup({
 		}),
 	},
 	sources = {
-		{ name = "nvim_lua" },
 		{ name = "nvim_lsp" },
+		{ name = "nvim_lua" },
 		{ name = "path" },
-		{ name = "luasnip", option = { use_show_condition = false } },
+		{ name = "luasnip", option = { use_show_condition = true } },
 		{ name = "treesitter", keyword_length = 5, max_item_count = 5 },
 		{ name = "buffer", keyword_length = 5, max_item_count = 5 },
 		{ name = "rg", keyword_length = 5, max_item_count = 5 },

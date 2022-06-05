@@ -2,7 +2,7 @@
 wow:
   directory: ~
   directories:
-    Retail: /home/thorsten/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_
+    Retail: /home/thorsten/GamesNVMe/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_
   flavor: Retail
 addons:
   global_release_channel: Stable
@@ -11,8 +11,8 @@ addons:
       - MythicDungeonTools
   release_channels:
     Retail:
-      BigWigs: Stable
       RUF: Stable
+      BigWigs: Stable
   delete_saved_variables: false
 theme: Dark
 column_config:
@@ -75,12 +75,17 @@ scale: 1.0
 backup_directory: ~
 backup_addons: false
 backup_wtf: false
+backup_config: false
+backup_screenshots: false
+backup_fonts: false
 hide_ignored_addons: false
 self_update_channel: Stable
 weak_auras_account:
   Retail: JERUSALEMX
 alternating_row_colors: true
+is_keybindings_enabled: true
 language: English
 catalog_source: Curse
 auto_update: false
 compression_format: Zip
+zstd_compression_level: 0

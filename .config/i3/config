@@ -1,4 +1,7 @@
+#
 # i3 wm config file
+
+set $HOME /home/thorsten
 
 ## Key Bindings
 ### Set Mod Key
@@ -22,6 +25,7 @@ bindsym --release Mod1+Tab exec rofi -show window -theme sidetab
 # bindsym $mod+Shift+k move down
 # bindsym $mod+Shift+l move up
 # bindsym $mod+Shift+semicolon move right
+
 ### change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -32,7 +36,7 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-### split in horizontal orientation
+
 ### split in horizontal orientation
 bindsym $mod+b split h
 ### split in vertical orientation
@@ -60,6 +64,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
 ### switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -71,6 +76,7 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+
 ### move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -82,18 +88,21 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
 ### reload the configuration file
 bindsym $mod+Shift+c reload
+
 ### restart i3 inplace
 bindsym $mod+Shift+r restart
+
 ### exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit?' -B 'Yes' 'i3-msg exit'"
+
 ### shutdown
 bindsym $mod+Mod1+s exec "i3-nagbar -m 'SHUTDOWN?' -B 'Shutdown' 'systemctl poweroff -i'
 mode "$mode_shutdown" {
 	bindsym r exec --no-startup-id i3exit reboot, mode "default" 
 	bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
-	
 	bindsym Return mode "default"    
 	bindsym Escape mode "default"
 }
@@ -101,10 +110,10 @@ mode "$mode_shutdown" {
 bindsym $mod+Mod1+l exec "i3lock -c000000 -e -f -i /home/thorsten/Documents/Wallpapers/3840x2160_arch_linux_02.png"
 ### resize window (you can also use the mouse for that)
 mode "resize" {
-	bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+	bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
         # back to normal: Enter or Escape or $mod+r
 	bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -130,8 +139,20 @@ font pango:Hack 8
 ### Workspace Bar with Status
 bar {
 	position top
-        font pango:Hack 10, FontAwesome 10
- 	status_command i3status
+    font pango:Hack 10, FontAwesome 10
+   
+   status_command i3status-rs
+   # status_command i3status
+
+    colors {
+        separator #666666
+        background #222222
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
 }
 ### Bar Toggle
 bindsym $mod+M bar mode toggle
@@ -146,24 +167,27 @@ exec --no-startup-id copyq
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 exec --no-startup-id xfce4-clipman
-exec --no-startup-id synergy-tray
-exec --no-startup-id pamac-tray
 exec --no-startup-id caffeine
+
 
 # exec --no-startup-id remmina -i
 # exec --no-startup-id task-indicator
 # exec --no-startup-id xfce4-power-manage
 # exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 
-exec /usr/bin/xrdb $HOME/.Xdefaults
-exec /usr/lib/polkit-1/polkitd --no-debug
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/bin/xrdb $HOME/.Xdefaults
+exec --no-startup-id /usr/lib/polkit-1/polkitd --no-debug
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 ## Application Launchers
 bindsym $mod+Shift+p exec /usr/bin/xfce4-screenshooter
 
 ## Layout Defaults
+### We don't need title bars
+# new_window 1pixel
 ### Floating Popups
+# for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 ### Floating Applications
 for_window [class="Steam" instance="Steam"] floating enable
@@ -177,18 +201,25 @@ for_window [class="steam_app_1222680"] floating enable
 
 ## Load Workspaces
 
-##exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/thorsten/.config/i3/workspace-1.json'"
+# exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/thorsten/.config/i3/workspace-dev-stacked.json; workspace 1; append_layout /home/thorsten/.config/i3/workspace-foursplit-default.json'"
+ 
+### Default workspace
+exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/thorsten/.config/i3/workspace-foursplit-default.json'"
+exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/alacritty'
+exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/alacritty'
+exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/alacritty'
+exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/alacritty'
+  
+### Dev Workspace
+# exec --no-startup-id i3-msg 'workspace 2; exec alacritty --working-directory $HOME/src -t vim -e /usr/bin/vim'
+# exec --no-startup-id i3-msg 'workspace 2; exec alacritty --working-directory $HOME/src -t Run'
+# exec --no-startup-id i3-msg 'workspace 2; exec firefox-developer-edition'
 
-## Dev Workspace
-exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/thorsten/.config/i3/workspace-dev-stacked.json; workspace 1; append_layout /home/thorsten/.config/i3/workspace-foursplit.json'"
-# exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/thorsten/.config/i3/workspace-foursplit.json'"
-# exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/thorsten/.config/i3/workspace-dev.json'"
-exec --no-startup-id urxvt -cd $HOME/src -e vim
-exec --no-startup-id urxvt -title Run -cd $HOME/src
-exec --no-startup-id firefox-developer-edition
+# exec --no-startup-id i3-msg 'workspace 1;'
 
-## Default workspace
-exec --no-startup-id /usr/bin/urxvt -title DefaultTerm
-exec --no-startup-id /usr/bin/urxvt -title DefaultTerm
-exec --no-startup-id /usr/bin/urxvt -title DefaultTerm
-exec --no-startup-id /usr/bin/urxvt -title DefaultTerm
+### Dev Workspace
+# exec --no-startup-id $HOME/bin/devws-startup 
+
+### Defaut Workspace
+# exec --no-startup-id $HOME/bin/dws-startup
+

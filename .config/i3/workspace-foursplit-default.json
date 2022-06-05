@@ -32,9 +32,8 @@
                     "percent": 1,
                     "swallows": [
                        {
-                        "class": "^URxvt$",
-                        "instance": "^urxvt$"
-                       // "title": "^i3\\-save\\-tree\\ \\-workspace\\=1\\ \\>\\ four\\.json$"
+                        "class": "^Alacritty$",
+                        "instance": "^Alacritty$"
                        }
                     ],
                     "type": "con"
@@ -65,9 +64,8 @@
                     "percent": 1,
                     "swallows": [
                        {
-                       "class": "^URxvt$",
-                       "instance": "^urxvt$"
-                       // "title": "^thorsten\\@ullr\\:\\~$"
+                       "class": "^Alacritty$",
+                       "instance": "^Alacritty$"
                        }
                     ],
                     "type": "con"
@@ -110,9 +108,8 @@
                     "percent": 1,
                     "swallows": [
                        {
-                       "class": "^URxvt$",
-                       "instance": "^urxvt$"
-                       // "title": "^thorsten\\@ullr\\:\\~$"
+                       "class": "^Alacritty$",
+                       "instance": "^Alacritty$"
                        }
                     ],
                     "type": "con"
@@ -143,9 +140,8 @@
                     "percent": 1,
                     "swallows": [
                        {
-                       "class": "^URxvt$",
-                       "instance": "^urxvt$"
-                       // "title": "^thorsten\\@ullr\\:\\~$"
+                       "class": "^Alacritty$",
+                       "instance": "^Alacritty$"
                        }
                     ],
                     "type": "con"

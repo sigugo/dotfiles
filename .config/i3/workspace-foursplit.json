@@ -28,13 +28,11 @@
                        "y": 0
                     },
                     "marks": [],
-                    "name": "i3-save-tree -workspace=1 > four.json",
                     "percent": 1,
                     "swallows": [
                        {
-                        "class": "^URxvt$",
-                        "instance": "^urxvt$",
-                        "title": "DefaultTerm"
+                        "class": "^Alacritty$",
+                        "instance": "^Alacritty$",
                        }
                     ],
                     "type": "con"
@@ -65,9 +63,8 @@
                     "percent": 1,
                     "swallows": [
                        {
-                        "class": "^URxvt$",
-                        "instance": "^urxvt$",
-                        "title": "DefaultTerm"
+                        "class": "^Alacritty$",
+                        "instance": "^Alacritty$",
                        }
                     ],
                     "type": "con"
@@ -110,9 +107,8 @@
                     "percent": 1,
                     "swallows": [
                        {
-                        "class": "^URxvt$",
-                        "instance": "^urxvt$",
-                        "title": "DefaultTerm"
+                        "class": "^Alacritty$",
+                        "instance": "^Alacritty$",
                        }
                     ],
                     "type": "con"
@@ -143,9 +139,8 @@
                     "percent": 1,
                     "swallows": [
                        {
-                        "class": "^URxvt$",
-                        "instance": "^urxvt$",
-                        "title": "DefaultTerm"
+                        "class": "^Alacritty$",
+                        "instance": "^Alacritty$",
                        }
                     ],
                     "type": "con"
