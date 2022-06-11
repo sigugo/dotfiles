@@ -14,52 +14,55 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	api.nvim_exec("source " .. install_path, false)
 end
 
--- Begin vim-plug
+--[[ Begin vim-plug ]]
 local Plug = vim.fn["plug#"]
 
 vim.call("plug#begin", "~/.config/nvim/plugins")
 
--- -- Plugins
+--[[ Plugins ]]
 
--- -- Impatient
+--[[ Impatient ]]
 Plug("lewis6991/impatient.nvim")
 
--- -- Color Schemes
+--[[ Color Schemes ]]
 Plug("folke/tokyonight.nvim", { ["branch"] = "main" })
 Plug("rebelot/kanagawa.nvim")
 
--- -- DevIcon Support
+--[[ DevIcon Support ]]
 Plug("kyazdani42/nvim-web-devicons")
 
--- -- Status Line
+--[[ Status Line ]]
 Plug("nvim-lualine/lualine.nvim")
 Plug("akinsho/bufferline.nvim")
 
--- -- telescope fuzzy finder with native fzf
+--[[ telescope fuzzy finder with native fzf ]]
 Plug("nvim-lua/plenary.nvim")
 Plug("nvim-telescope/telescope.nvim")
 Plug("nvim-telescope/telescope-fzf-native.nvim", { ["do"] = "make" })
 
--- -- treesitter highlighting
+--[[ treesitter highlighting ]]
 Plug("nvim-treesitter/nvim-treesitter", { ["do"] = ":TSUpdate" })
 Plug("nvim-treesitter/nvim-treesitter-textobjects")
 
--- -- lsp configuration
+--[[ lsp configuration ]]
 Plug("neovim/nvim-lspconfig")
 Plug("nvim-lua/lsp_extensions.nvim")
 
--- -- gitSigns
+--[[ gitSigns ]]
 Plug("lewis6991/gitsigns.nvim")
 
--- --  show status for code issues
+--[[ show status for code issues ]]
 Plug("folke/trouble.nvim")
 
--- -- popup vim.ui.select
+--[[ popup vim.ui.select ]]
 Plug("RishabhRD/popfix")
 Plug("hood/popui.nvim")
 
--- -- specific languages
-Plug("tjdevries/nlua.nvim")
+--[[ Comments ]]
+Plug("numToStr/Comment.nvim")
+
+--[[ specific languages ]]
+-- Plug("tjdevries/nlua.nvim")
 -- Plug('SidOfc/mkdx')
 -- Plug('ixru/nvim-markdown')
 -- .log files
@@ -73,12 +76,11 @@ Plug("ray-x/go.nvim")
 Plug("mfussenegger/nvim-dap")
 Plug("mfussenegger/nvim-dap-ui")
 Plug("theHamsta/nvim-dap-virtual-text")
--- Plug('plasticboy/vim-markdown')
 Plug("joker1007/vim-markdown-quote-syntax")
+-- Plug('plasticboy/vim-markdown')
 -- Plug('zchee/nvim-go', { ['do'] = 'make' })
 
--- -- programing completion, snippets, formatting ...
-
+--[[ programing completion, snippets, formatting ... ]]
 -- Plug("mhartington/formatter.nvim")
 Plug("hrsh7th/nvim-cmp")
 Plug("hrsh7th/cmp-buffer")
@@ -99,13 +101,13 @@ Plug("lukas-reineke/indent-blankline.nvim")
 Plug("sbdchd/neoformat")
 Plug("godlygeek/tabular")
 
--- End vim-plug
+--[[ End vim-plug ]]
 vim.call("plug#end")
 
--- Impatient Plugin Loading
+--[[ Impatient Plugin Loading ]]
 require("impatient")
 
--- Plugin Configurations
+--[[ Plugin Configuration Loading ]]
 require("pcfg.nvimtreesitter")
 require("pcfg.telescope")
 require("pcfg.nvimcmp")
@@ -119,3 +121,4 @@ vim.ui.select = require("popui.ui-overrider")
 require("trouble").setup({})
 require("go").setup()
 require("aerial").setup({})
+require("pcfg.commentnvim")

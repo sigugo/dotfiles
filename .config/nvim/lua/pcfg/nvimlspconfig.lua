@@ -112,9 +112,6 @@ for _, lsp in ipairs(servers) do
 				staticcheck = true,
 			},
 		},
-		flags = {
-			debounce_text_changes = 200,
-		},
 	})
 end
 
@@ -136,11 +133,3 @@ end
 -- 		usePlaceholders = true,
 -- 	},
 -- })
-
-require("nlua.lsp.nvim").setup(require("lspconfig"), {
-	on_attach = on_attach,
-	capabilities = capabilities,
-	flags = {
-		debounce_text_changes = 150,
-	},
-})

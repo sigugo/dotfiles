@@ -1,5 +1,6 @@
 local cmp = require("cmp")
 local lspkind = require("lspkind")
+local snippet = require("luasnip")
 
 local feedkey = function(key, mode)
 	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
@@ -16,12 +17,12 @@ end
 cmp.setup({
 	snippet = {
 		expand = function(args)
-			require("luasnip").lsp_expand(args.body)
+			snippet.lsp_expand(args.body)
 		end,
 	},
 	mapping = {
 		["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
-		["C-p"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+		["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
 		["<C-d>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		-- ["<C-Space>"] = cmp.mapping.complete(),
@@ -41,6 +42,21 @@ cmp.setup({
 		}),
 
 		["<C-e>"] = cmp.mapping.close(),
+		["<C-k>"] = cmp.mapping(function(fallback)
+			if snippet.jumpable(-1) then
+				snippet.jump(-1)
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
+		["<C-l>"] = cmp.mapping(function(fallback)
+			if snippet.jumpable(1) then
+				snippet.jump(1)
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
+
 		["<C-y>"] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.insert,
 			select = true,
