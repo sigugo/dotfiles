@@ -33,8 +33,8 @@ kmap('n', '<leader>p', '"+p')
 kmap('v', '<leader>p', '"+p')
 
 -- LSP
-kmap('n', '<leader>ldn', ':lua vim.lsp.diagnostic.goto_next()<CR>')
-kmap('n', '<leader>ldp', ':lua vim.lsp.diagnostic.goto_prev()<CR>')
+kmap('n', '<leader>ldn', ':lua vim.diagnostic.goto_next()<CR>')
+kmap('n', '<leader>ldp', ':lua vim.diagnostic.goto_prev()<CR>')
 kmap('n', '<leader>lds', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>')
 kmap('n', '<leader>lgd', ':lua vim.lsp.buf.definition()<CR>zz')
 kmap('n', '<leader>lgD', ':lua vim.lsp.buf.declaration()<CR>')
@@ -67,7 +67,7 @@ kmap('s', '<C-j>', ':lua require"telescope.builtin".find_files()<CR>')
 kmap('', '<leader>tt', ':TroubleToggle<CR>')
 
 -- -- Nvim-Tree
-kmap('', '<leader>rr', ':NvimTreeToggle<CR>')
+-- kmap('', '<leader>rr', ':NvimTreeToggle<CR>')
 
 -- -- Gitsigns
 kmap('', '<leader>gsb', ':Gitsigns blame_line<CR>')

@@ -1,7 +1,7 @@
 local nvim_lsp = require("lspconfig")
--- local nvim_lsp_configs = require("lspconfig/configs")
 
-local servers = { "jedi_language_server", "rust_analyzer", "intelephense", "gopls" , "sumneko_lua"}
+-- local servers = { "jedi_language_server", "rust_analyzer", "intelephense", "gopls", "sumneko_lua" }
+local servers = { "jedi_language_server", "rust_analyzer", "gopls", "sumneko_lua" }
 
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -17,7 +17,11 @@ local on_attach = function(client, bufnr)
 
 	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 		underline = true,
-		virtual_text = true,
+		virtual_text = false, -- disabled for virtual_lines
+		-- virtual_lines = true,
+		-- virtual_lines = { true, prefix = "🔥" },
+		-- virtual_lines = { true, prefix = "↓" },
+		virtual_lines = { true, prefix = "↓🪲" },
 		signs = true,
 		update_in_insert = false,
 	})
@@ -129,6 +133,11 @@ for _, lsp in ipairs(servers) do
 			},
 			["golangci_lint_ls"] = {
 				filetypes = { "go", "gomod" },
+			},
+			["Lua"] = {
+				diagnostics = {
+					globals = { "vim" },
+				},
 			},
 		},
 	})

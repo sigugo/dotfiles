@@ -24,16 +24,25 @@ vim.call("plug#begin", "~/.config/nvim/plugins")
 -- -- Impatient
 Plug("lewis6991/impatient.nvim")
 
--- -- Color Schemes
+-- -- Colorschemes
 Plug("folke/tokyonight.nvim", { ["branch"] = "main" })
+Plug("rafamadriz/neon")
+Plug("shaeinst/roshnivim-cs")
+Plug("tomasiser/vim-code-dark")
 Plug("rebelot/kanagawa.nvim")
+Plug("bluz71/vim-moonfly-colors")
+Plug("marko-cerovac/material.nvim")
 
 -- -- DevIcon Support
 Plug("kyazdani42/nvim-web-devicons")
 
 -- -- Status Line
 Plug("nvim-lualine/lualine.nvim")
-Plug("akinsho/bufferline.nvim")
+-- Plug("akinsho/bufferline.nvim")
+Plug("noib3/nvim-cokeline")
+
+-- Keybinds
+Plug("folke/which-key.nvim")
 
 -- -- telescope fuzzy finder with native fzf
 Plug("nvim-lua/plenary.nvim")
@@ -50,6 +59,8 @@ Plug("nvim-treesitter/nvim-treesitter", { ["do"] = ":TSUpdate" })
 -- -- lsp configuration
 Plug("neovim/nvim-lspconfig")
 Plug("nvim-lua/lsp_extensions.nvim")
+Plug("j-hui/fidget.nvim")
+Plug("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
 
 -- --  show status for code issues
 Plug("folke/trouble.nvim")
@@ -60,7 +71,6 @@ Plug("hood/popui.nvim")
 
 -- -- Comments
 Plug("numToStr/Comment.nvim")
-
 -- -- specific languages
 -- markdown
 -- Plug('plasticboy/vim-markdown')
@@ -92,7 +102,7 @@ Plug("sbdchd/neoformat")
 -- Plug("hrsh7th/vim-vsnip-integ")
 Plug("L3MON4D3/LuaSnip")
 Plug("stevearc/vim-vscode-snippets")
-Plug("rafamadriz/friendly-snippets")
+-- Plug("rafamadriz/friendly-snippets")
 Plug("hrsh7th/nvim-cmp")
 Plug("hrsh7th/cmp-nvim-lsp")
 Plug("hrsh7th/cmp-nvim-lua")
@@ -118,15 +128,22 @@ vim.call("plug#end")
 require("impatient")
 
 -- Plugin Configurations
-require("pcfg.nvimtreesitter")
-require("pcfg.telescope")
-require("pcfg.nvimcmp")
-require("pcfg.nvimlspconfig")
-require("gitsigns").setup()
-require("pcfg.formatternvim")
-require("pcfg.nvimlualine")
-require("bufferline").setup({})
-require("pcfg.rusttools")
+-- -- One liners
 vim.ui.select = require("popui.ui-overrider")
 require("go").setup()
+require("gitsigns").setup()
+require("fidget").setup({})
+require("lsp_lines").register_lsp_virtual_lines()
+require("which-key").setup({})
+-- require("pcfg.lsplines")
+-- -- External Scripts
+require("pcfg.telescope")
+require("pcfg.nvimtreesitter")
+require("pcfg.nvimlspconfig")
+require("pcfg.nvimcmp")
+require("pcfg.formatternvim")
+require("pcfg.nvimlualine")
+require("pcfg.rusttools")
 require("pcfg.commentnvim")
+require("pcfg.nvimcokeline")
+-- require("bufferline").setup({})

@@ -1,6 +1,14 @@
 # ~/.config/starship/config.toml
 
 add_newline = true
+command_timeout = 3000
+
+[hostname]
+ssh_only = true
+format = "[$ssh_symbol](bold blue) on [$hostname](bold green) "
+trim_at = "."
+disabled = false
+
 
 [battery]
 full_symbol = ""

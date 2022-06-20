@@ -24,6 +24,7 @@ export RUSTBIN="$CARGO_HOME/bin"
 export RUSTUP_HOME="$XDG_CONFIG_HOME/rustup"
 
 export GOPATH="$HOME/src/go"
+export GOPATHBIN="$GOPATH/bin"
 export GOBIN="$HOME/bin/go"
 export GOCACHE="$XDG_CACHE_HOME/go-build"
 
@@ -38,7 +39,7 @@ export STARSHIP_CACHE=$XDG_CACHE_HOME/starship
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$XDG_CONFIG_HOME/local/lib"
 
-export PATH=$HOME/bin:$HOME/.config/bin:$HOME/.local/bin:$HOME/.config/local/bin:$GOBIN:$RUSTBIN:$PATH
+export PATH=$HOME/bin:$HOME/.config/bin:$HOME/.local/bin:$HOME/.config/local/bin:$GOBIN:$GOPATHBIN:$RUSTBIN:$PATH
 
 export DEBUGINFOD_URLS="https://debuginfod.elfutils.org/"
 
