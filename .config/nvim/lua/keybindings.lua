@@ -59,7 +59,8 @@ kmap('n', '<leader>ft', ':Neoformat<CR>')
 
 -- -- Telescope
 kmap('n', '<C-p>', ':lua require"telescope.builtin".find_files()<CR>')
-kmap('n', '<leader>ff', ':lua require"telescope.builtin".find_files()<CR>')
+-- kmap('n', '<leader>ff', ':lua require"telescope.builtin".find_files()<CR>')
+kmap('n', '<leader>ff', ':Telescope find_files prompt_prefix=🔍<CR>')
 kmap('n', '<leader>fg', ':lua require"telescope.builtin".live_grep()<CR>')
 kmap('n', '<leader>fg', ':lua require"telescope.builtin".live_grep()<CR>')
 

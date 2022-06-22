@@ -47,6 +47,7 @@ Plug("nvim-treesitter/nvim-treesitter-textobjects")
 --[[ lsp configuration ]]
 Plug("neovim/nvim-lspconfig")
 Plug("nvim-lua/lsp_extensions.nvim")
+Plug("j-hui/fidget.nvim")
 
 --[[ gitSigns ]]
 Plug("lewis6991/gitsigns.nvim")
@@ -62,9 +63,15 @@ Plug("hood/popui.nvim")
 Plug("numToStr/Comment.nvim")
 
 --[[ specific languages ]]
+-- .lua
 -- Plug("tjdevries/nlua.nvim")
--- Plug('SidOfc/mkdx')
--- Plug('ixru/nvim-markdown')
+-- .md files
+-- Plug("SidOfc/mkdx")
+-- Plug("ixru/nvim-markdown")
+-- Plug("jakewvincent/mkdnflow.nvim")
+-- Plug("plasticboy/vim-markdown")
+Plug("joker1007/vim-markdown-quote-syntax")
+
 -- .log files
 Plug("mtdl9/vim-log-highlighting")
 -- rust
@@ -76,8 +83,6 @@ Plug("ray-x/go.nvim")
 Plug("mfussenegger/nvim-dap")
 Plug("mfussenegger/nvim-dap-ui")
 Plug("theHamsta/nvim-dap-virtual-text")
-Plug("joker1007/vim-markdown-quote-syntax")
--- Plug('plasticboy/vim-markdown')
 -- Plug('zchee/nvim-go', { ['do'] = 'make' })
 
 --[[ programing completion, snippets, formatting ... ]]
@@ -122,3 +127,4 @@ require("trouble").setup({})
 require("go").setup()
 require("aerial").setup({})
 require("pcfg.commentnvim")
+require("fidget").setup({})

@@ -111,6 +111,25 @@ for _, lsp in ipairs(servers) do
 				},
 				staticcheck = true,
 			},
+			Lua = {
+				diagnostics = {
+					global = {
+						"vim",
+						"hs",
+						"it",
+						"describe",
+						"before_each",
+						"after_each",
+					},
+					disable = {
+						"lowercase-global",
+						"undefined-global",
+						"unused-local",
+						"unused-vararg",
+						"trailing-space",
+					},
+				},
+			},
 		},
 	})
 end
