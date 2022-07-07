@@ -1,5 +1,14 @@
 local nvim_lsp = require("lspconfig")
-local servers = { "jedi_language_server", "rust_analyzer", "zls", "clangd", "gopls", "sumneko_lua" }
+local servers = {
+	"jedi_language_server",
+	"rust_analyzer",
+	"zls",
+	"clangd",
+	"gopls",
+	"sumneko_lua",
+	"yamlls",
+	"ansiblels",
+}
 -- local servers = { "jedi_language_server", "rust_analyzer", "zls", "clangd" }
 
 -- global on_attach

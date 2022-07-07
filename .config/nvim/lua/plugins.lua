@@ -113,18 +113,22 @@ vim.call("plug#end")
 require("impatient")
 
 --[[ Plugin Configuration Loading ]]
+-- -- Config scripts
 require("pcfg.nvimtreesitter")
 require("pcfg.telescope")
 require("pcfg.nvimcmp")
 require("pcfg.nvimlspconfig")
 require("gitsigns").setup()
-require("luasnip.loaders.from_vscode").lazy_load()
 require("pcfg.nvimlualine")
 require("bufferline").setup({})
 require("pcfg.rusttools")
-vim.ui.select = require("popui.ui-overrider")
+-- -- One-line
+require("luasnip.loaders.from_vscode").lazy_load()
 require("trouble").setup({})
 require("go").setup()
 require("aerial").setup({})
 require("pcfg.commentnvim")
 require("fidget").setup({})
+-- -- Settings
+vim.ui.select = require("popui.ui-overrider")
+vim.g.neoformat_enabled_yaml = { "prettierd", "prettier" }
