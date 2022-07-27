@@ -57,9 +57,14 @@ Plug("lewis6991/gitsigns.nvim")
 --[[ show status for code issues ]]
 Plug("folke/trouble.nvim")
 
---[[ popup vim.ui.select ]]
-Plug("RishabhRD/popfix")
-Plug("hood/popui.nvim")
+-- [[ UI]]
+-- nvim-notify
+Plug("rcarriga/nvim-notify")
+-- popup vim.ui.select
+-- Plug("RishabhRD/popfix")
+-- Plug("hood/popui.nvim")
+-- dressing
+-- Plug("stevearc/dressing.nvim")
 
 --[[ Comments ]]
 Plug("numToStr/Comment.nvim")
@@ -103,6 +108,9 @@ Plug("stevearc/aerial.nvim")
 Plug("heavenshell/vim-pydocstring", { ["do"] = "make install", ["for"] = "python" })
 Plug("windwp/nvim-autopairs")
 
+-- Experimental
+Plug("lvimuser/lsp-inlayhints.nvim")
+
 Plug("numToStr/Comment.nvim")
 Plug("lukas-reineke/indent-blankline.nvim")
 Plug("sbdchd/neoformat")
@@ -119,10 +127,12 @@ require("impatient")
 require("pcfg.nvimtreesitter")
 require("pcfg.telescope")
 require("pcfg.nvimcmp")
+require("pcfg.lspinlayhints")
 require("pcfg.nvimlspconfig")
 require("pcfg.nvimlualine")
 require("pcfg.rusttools")
 require("pcfg.nvimautopairs")
+require("pcfg.commentnvim")
 -- -- One-line
 require("gitsigns").setup()
 require("bufferline").setup({})
@@ -130,7 +140,6 @@ require("luasnip.loaders.from_vscode").lazy_load()
 require("trouble").setup({})
 require("go").setup()
 require("aerial").setup({})
-require("pcfg.commentnvim")
 require("fidget").setup({})
 -- -- Settings
 vim.ui.select = require("popui.ui-overrider")
