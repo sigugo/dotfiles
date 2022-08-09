@@ -16,7 +16,7 @@ alias update='yay -Syu'
 alias sshinsecure='ssh -oKexAlgorithms=+diffie-hellman-group1-sha1'
 
 ## fix non XDG
-alias tmux='tmux -f "$TMUX_CONFIG_HOME/tmux.conf"'
+## obsolete # alias tmux='tmux -f "$TMUX_CONFIG_HOME/tmux.conf"'
 
 ### helpers
 alias tstamp='date +%Y%m%d%H%M%S'

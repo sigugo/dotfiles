@@ -2,7 +2,7 @@
 
 
 add_newline = true
-command_timeout = 3000
+command_timeout = 300
 
 [hostname]
 ssh_only = true
