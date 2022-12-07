@@ -39,8 +39,8 @@ opt('g', 'tokyonight_style', 'night')
 -- opt('g', 'tokyonight_italic_comments', true)
 -- opt('g', 'tokyonight_italic_variables', false)
 
-vim.cmd('colorscheme torte')
--- vim.cmd('colorscheme tokyonight')
+-- vim.cmd('colorscheme torte')
+vim.cmd('colorscheme tokyonight-night')
 -- vim.cmd('colorscheme kanagawa')
 -- vim.cmd('let g:lightline = {"colorscheme" : "tokyonight"}')
 

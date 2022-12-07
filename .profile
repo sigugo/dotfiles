@@ -23,6 +23,7 @@ export CARGO_HOME="$XDG_CONFIG_HOME/cargo"
 export RUSTBIN="$CARGO_HOME/bin"
 export RUSTUP_HOME="$XDG_CONFIG_HOME/rustup"
 
+export GOPROXY="https://proxy.golang.org,direct"
 export GOPATH="$HOME/src/go"
 export GOPATHBIN="$GOPATH/bin"
 export GOBIN="$HOME/bin/go"
@@ -44,4 +45,9 @@ export PATH=$HOME/bin:$HOME/.config/bin:$HOME/.local/bin:$HOME/.config/local/bin
 export DEBUGINFOD_URLS="https://debuginfod.elfutils.org/"
 
 source $XDG_CONFIG_HOME/aliases
+
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/sigugo/.config/local/share/JetBrains/Toolbox/scripts"
 

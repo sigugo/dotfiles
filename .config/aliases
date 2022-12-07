@@ -30,7 +30,7 @@ alias todo='/usr/bin/git --git-dir=$XDG_CONFIG_HOME/todo/ --work-tree=$HOME'
 alias update-todo='todo add $HOME/todo.md && todo commit -m "Update $(date +%Y-%m-%d.%H:%M:%S)" && todo push -u origin'
 
 ### manage wine
-alias wineprocs='ps auxwww | egrep -iE "wine|\.exe" | grep -v grep'
+alias wineprocs='ps auxwww | grep -iE "wine|\.exe" | grep -v grep'
 alias wineprocids='wineprocs | tr -s " " | cut -d" " -f 2'
 alias winekill='wineprocids | xargs kill -9 2>&1 > /dev/null || echo "No wine processes found"'
 alias wineterm='wineprocids | xargs kill -15 2>&1 > /dev/null || echo "No wine processes found"'

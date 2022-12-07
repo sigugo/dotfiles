@@ -5,6 +5,8 @@
             "attack": 130.0,
             "boost-amount": 6.0,
             "boost-threshold": -60.0,
+            "bypass": false,
+            "dry": -100.0,
             "hpf-frequency": 10.0,
             "hpf-mode": "off",
             "input-gain": 0.0,
@@ -16,7 +18,7 @@
             "output-gain": 0.0,
             "ratio": 5.0,
             "release": 600.0,
-            "release-threshold": -120.0,
+            "release-threshold": -100.0,
             "sidechain": {
                 "lookahead": 0.0,
                 "mode": "RMS",
@@ -25,9 +27,12 @@
                 "source": "Middle",
                 "type": "Feed-forward"
             },
-            "threshold": -10.0
+            "threshold": -10.0,
+            "wet": 0.0
         },
         "equalizer": {
+            "balance": 0.0,
+            "bypass": false,
             "input-gain": 0.0,
             "left": {
                 "band0": {
@@ -134,6 +139,8 @@
             "mode": "IIR",
             "num-bands": 10,
             "output-gain": 0.0,
+            "pitch-left": 0.0,
+            "pitch-right": 0.0,
             "right": {
                 "band0": {
                     "frequency": 32.0,
@@ -240,20 +247,36 @@
         },
         "gate": {
             "attack": 2000.0,
-            "detection": "Peak",
+            "bypass": false,
+            "curve-threshold": -40.0,
+            "curve-zone": -40.0,
+            "dry": -100.0,
+            "hpf-frequency": 10.0,
+            "hpf-mode": "off",
+            "hysteresis": false,
+            "hysteresis-threshold": -12.0,
+            "hysteresis-zone": -6.0,
             "input-gain": 0.0,
-            "knee": 18.0,
+            "lpf-frequency": 20000.0,
+            "lpf-mode": "off",
             "makeup": 0.0,
             "output-gain": 0.0,
-            "range": -30.0,
-            "ratio": 2.0,
+            "reduction": -30.0,
             "release": 2000.0,
-            "stereo-link": "Average",
-            "threshold": -50.0
+            "sidechain": {
+                "input": "Internal",
+                "lookahead": 0.0,
+                "mode": "Peak",
+                "preamp": 0.0,
+                "reactivity": 10.0,
+                "source": "Middle"
+            },
+            "wet": 0.0
         },
         "limiter": {
             "alr": false,
             "attack": 5.0,
+            "bypass": false,
             "dithering": "None",
             "external-sidechain": false,
             "gain-boost": false,
@@ -280,7 +303,7 @@
                 "makeup": 0.0,
                 "mute": false,
                 "ratio": 1.7,
-                "release-threshold": -120.0,
+                "release-threshold": -100.0,
                 "release-time": 600.0,
                 "sidechain-custom-highcut-filter": false,
                 "sidechain-custom-lowcut-filter": false,
@@ -306,7 +329,7 @@
                 "makeup": 0.0,
                 "mute": false,
                 "ratio": 1.7,
-                "release-threshold": -120.0,
+                "release-threshold": -100.0,
                 "release-time": 450.0,
                 "sidechain-custom-highcut-filter": false,
                 "sidechain-custom-lowcut-filter": false,
@@ -333,7 +356,7 @@
                 "makeup": 0.0,
                 "mute": false,
                 "ratio": 1.7,
-                "release-threshold": -120.0,
+                "release-threshold": -100.0,
                 "release-time": 250.0,
                 "sidechain-custom-highcut-filter": false,
                 "sidechain-custom-lowcut-filter": false,
@@ -360,7 +383,7 @@
                 "makeup": 0.0,
                 "mute": false,
                 "ratio": 1.7,
-                "release-threshold": -120.0,
+                "release-threshold": -100.0,
                 "release-time": 100.0,
                 "sidechain-custom-highcut-filter": false,
                 "sidechain-custom-lowcut-filter": false,
@@ -386,10 +409,13 @@
             "band7": {
                 "enable-band": false
             },
+            "bypass": false,
             "compressor-mode": "Modern",
+            "dry": -100.0,
             "envelope-boost": "None",
             "input-gain": 0.0,
-            "output-gain": 0.0
+            "output-gain": 0.0,
+            "wet": 0.0
         },
         "plugins_order": [
             "gate",
