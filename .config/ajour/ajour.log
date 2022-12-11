@@ -1,0 +1,208 @@
+19:10:55.814 [ajour][INFO] Ajour 1.3.2 has started.
+19:10:55.818 [ajour::gui][DEBUG] config loaded:
+Config {
+    wow: Wow {
+        directory: None,
+        directories: {
+            Retail: "/home/thorsten/GamesNVMe/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_",
+        },
+        flavor: Retail,
+    },
+    addons: Addons {
+        global_release_channel: Stable,
+        ignored: {
+            Retail: [
+                "MythicDungeonTools",
+            ],
+        },
+        release_channels: {
+            Retail: {
+                "RUF": Stable,
+                "BigWigs": Stable,
+            },
+        },
+        delete_saved_variables: false,
+    },
+    theme: Some(
+        "Dark",
+    ),
+    column_config: V3 {
+        my_addons_columns: [
+            ColumnConfigV2 {
+                key: "title",
+                width: None,
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "local",
+                width: Some(
+                    150,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "remote",
+                width: Some(
+                    150,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "status",
+                width: Some(
+                    85,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "channel",
+                width: Some(
+                    85,
+                ),
+                hidden: true,
+            },
+            ColumnConfigV2 {
+                key: "author",
+                width: Some(
+                    85,
+                ),
+                hidden: true,
+            },
+            ColumnConfigV2 {
+                key: "game_version",
+                width: Some(
+                    110,
+                ),
+                hidden: true,
+            },
+            ColumnConfigV2 {
+                key: "date_released",
+                width: Some(
+                    110,
+                ),
+                hidden: true,
+            },
+            ColumnConfigV2 {
+                key: "source",
+                width: Some(
+                    110,
+                ),
+                hidden: true,
+            },
+        ],
+        catalog_columns: [
+            ColumnConfigV2 {
+                key: "addon",
+                width: Some(
+                    387,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "description",
+                width: None,
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "source",
+                width: Some(
+                    85,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "num_downloads",
+                width: Some(
+                    105,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "game_version",
+                width: Some(
+                    105,
+                ),
+                hidden: true,
+            },
+            ColumnConfigV2 {
+                key: "date_released",
+                width: Some(
+                    105,
+                ),
+                hidden: false,
+            },
+            ColumnConfigV2 {
+                key: "install",
+                width: Some(
+                    85,
+                ),
+                hidden: false,
+            },
+        ],
+        aura_columns: [],
+    },
+    window_size: Some(
+        (
+            1918,
+            1052,
+        ),
+    ),
+    scale: Some(
+        1.0,
+    ),
+    backup_directory: None,
+    backup_addons: false,
+    backup_wtf: false,
+    backup_config: false,
+    backup_screenshots: false,
+    backup_fonts: false,
+    hide_ignored_addons: false,
+    self_update_channel: Stable,
+    weak_auras_account: {
+        Retail: "JERUSALEMX",
+    },
+    alternating_row_colors: true,
+    is_keybindings_enabled: true,
+    language: English,
+    catalog_source: Some(
+        Curse,
+    ),
+    auto_update: false,
+    compression_format: Zip,
+    zstd_compression_level: 0,
+}
+19:10:55.819 [ajour::gui][DEBUG] antialiasing: false
+19:10:55.876 [ajour_core::utility][DEBUG] checking for application update
+19:10:55.876 [ajour_core::theme][DEBUG] loading user themes
+19:10:55.878 [ajour_core::fs::theme][DEBUG] loaded 0 user themes
+19:10:56.113 [ajour_core::catalog][DEBUG] Downloaded latest catalog from https://raw.githubusercontent.com/ajour/catalog/main/catalog-0.2.0.json
+19:10:56.131 [ajour::gui::update][DEBUG] Message::ThemesLoaded(0 themes)
+19:10:56.131 [ajour::gui::update][DEBUG] Message::CachesLoaded(error: false)
+19:10:56.132 [ajour::gui::update][DEBUG] Message::Parse
+19:10:56.132 [ajour::gui::update][DEBUG] preparing to parse addons in "/home/thorsten/GamesNVMe/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_/Interface/AddOns"
+19:10:56.132 [ajour_core::parse][DEBUG] Retail - parsing addons folder
+19:10:56.132 [ajour_core::parse][DEBUG] Retail - 145 folders in AddOns directory to parse
+19:10:56.145 [ajour::gui::update][DEBUG] Message::CheckWeakAurasInstalled(Retail, is_installed: true)
+19:10:56.156 [ajour_core::parse][DEBUG] Retail - 145 fingerprints: 117 cached, 28 calculated, 0 added, 0 removed
+19:10:56.162 [ajour::gui::update][DEBUG] Message::ListWtfAccounts(Retail, num_accounts: 2)
+19:10:56.168 [ajour_core::parse][DEBUG] Retail - 145 addon folders successfully parsed from '.toc'
+19:10:56.168 [ajour_core::parse][DEBUG] Retail - 6 valid cache entries retrieved
+19:10:56.168 [ajour_core::parse][DEBUG] Retail - 136 unique fingerprints to check against curse api
+19:10:56.371 [ajour::gui::update][DEBUG] Message::CatalogDownloaded(16708 addons in catalog)
+19:10:56.462 [ajour::gui::update][DEBUG] Message::LatestRelease(Some("1.3.2"))
+19:10:57.286 [ajour::gui::update][DEBUG] Message::ParsedAuras(Retail, num_auras: 36)
+19:10:58.897 [ajour_core::parse][DEBUG] Retail - Invalid status code 403 Forbidden for url https://addons-ecs.forgesvc.net/api/v2/addon curse returned an error
+19:10:59.052 [ajour_core::parse][DEBUG] Retail - 1 tukui packages fetched
+19:10:59.325 [ajour_core::parse][DEBUG] Retail - 15 wowi packages fetched
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 0 hub packages fetched
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 0 git packages fetched
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 0 addons built from curse packages
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 1 addons built from tukui packages
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 14 addons built from wowi packages
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 0 addons built from hub packages
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 0 addons built from git packages
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 112 unknown addon folders
+19:10:59.638 [ajour_core::parse][DEBUG] Retail - 127 addons successfully parsed
+19:10:59.639 [ajour::gui::update][DEBUG] Message::ParsedAddons(Retail, 127 addons)
+19:11:00.808 [ajour::gui::update][DEBUG] Interaction::ModeSelected(Catalog)
+19:11:03.613 [ajour::gui::update][DEBUG] Interaction::ModeSelected(Install)

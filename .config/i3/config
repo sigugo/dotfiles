@@ -1,39 +1,24 @@
-# i3 config file (v4) - Documentation: https://i3wm.org/docs/userguide.html 
-
+# i3 config file
+## Housekeeping
+set $HOME /home/thorsten
 ## Set Mod Key
 set $mod Mod4
-
 ## We don't need title bars
-new_window 1pixel
-
+# new_window 1pixel
 ## Handle some window roles as floating, like expected
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 ### Special Windows
 for_window [class="Steam" instance="Steam"] floating enable
-
 ## Fonts
-font pango:Hack Nerd Font Mono 8, FontAwesome 8
-
-## Autostart core applications and features 
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id copyq
-
-## Handled by Dex
-## exec --no-startup-id blueman-applet
-## exec --no-startup-id caffeine
-## exec --no-startup-id nm-applet
-## exec --no-startup-id pasystray
-## exec --no-startup-id touchegg
-## exec --no-startup-id xfce4-power-manager
-
-## More Desktop file based autostart
-exec --no-startup-id dex --autostart --environment i3
-
-## Status Bar
+font pango:Hack Nerd Font Mono 8, Hack 8, FontAwesome 8
+### Workspace Bar with Status
 bar {
-    position top
-    status_command i3status-rs
+	position top
+    font pango:Hack 10, FontAwesome 10
+   
+   status_command i3status-rs
+   # status_command i3status
 
     colors {
         separator #666666
@@ -44,17 +29,15 @@ bar {
         inactive_workspace #333333 #333333 #888888
         urgent_workspace #2f343a #900000 #ffffff
     }
-
-
 }
 
+## Autostart core applications and features 
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id copyq
+## More Desktop file based autostart
+exec --no-startup-id dex --autostart --environment i3
 ## Bind Dmenu launcher
 bindsym $mod+d exec --no-startup-id dmenu_run
-### Placeholder for rofi 
-### bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-### Placeholder for dmenu-desktop wrapper 
-### bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-
 ## Program Launch Key Binds
 ### Terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -62,23 +45,13 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+n exec firefox-developer-edition 
 ### File Manager
 bindsym $mod+m exec thunar
-
-## Laptop Keys
-### Enable Multimedia Keys 
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-### Enable Brightness Keys
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10%
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -set 0.04%
-
 ##  Manage Windows and Containers
 ### kill focused window
 bindsym $mod+Shift+q kill
 ### Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+bindsym --release $mod+Shift+d exec rofi -show run -theme sidebar
+bindsym --release Mod1+Tab exec rofi -show window -theme sidetab
 ### change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -95,7 +68,7 @@ bindsym $mod+b split h
 bindsym $mod+v split v
 ### enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-# change container layout (stacked, tabbed, toggle split)
+### change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
@@ -118,9 +91,9 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
-
 ## Manage Workspaces
 ### Workspace names
+### Define names for default workspaces
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -157,12 +130,114 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Right workspace next
 bindsym $mod+Left workspace prev
 
+## Laptop Keys
+### Enable Multimedia Keys 
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+### Enable Brightness Keys
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10%
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -set 0.04%
 
 ## Manage i3
 ### reload the configuration file
 bindsym $mod+Shift+c reload
-### restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+### restart i3 inplace
 bindsym $mod+Shift+r restart
 ### exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit?' -B 'Yes' 'i3-msg exit'"
+### shutdown
+bindsym $mod+Mod1+s exec "i3-nagbar -m 'SHUTDOWN?' -B 'Shutdown' 'systemctl poweroff -i'
+mode "$mode_shutdown" {
+	bindsym r exec --no-startup-id i3exit reboot, mode "default" 
+	bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+	bindsym Return mode "default"    
+	bindsym Escape mode "default"
+}
+### lock screen
+bindsym $mod+Mod1+l exec "i3lock -c000000 -e -f -i /home/thorsten/Documents/Wallpapers/3840x2160_arch_linux_02.png"
+
+## Look
+### General
+hide_edge_borders both
+### Colors
+set $color1 #3366DD
+set $color1 #1793D1
+set $color2 #666666
+client.background #162025
+client.focused: #f2f2f2 #00253C #f2f2f #f2f2f2 #f2f2f2
+client.unfocused: #bfbfbf #162025 #bfbfbf #1c1b34 #100F45
+client.focused_inactive: #bfbfbf #162025 #bfbfbf #75404b #75404b
+client.urgent: #bfbfbf #162025 #bfbfbf #75404b #75404b
+client.placeholder: #bfbfbf #162025 #bfbfbf #75404b #75404b
+### Bar Toggle
+bindsym $mod+M bar mode toggle
+
+
+## Autostart
+exec --no-startup-id nitrogen --restore
+# exec --no-startup-id picom --xrender-sync-fence --no-fading-destroyed-argb --no-fading-openclose  --fade-in-step=1.0  --fade-out-step=1.0 --menu-opacity=1.0
+exec --no-startup-id fbxkb
+exec --no-startup-id pasystray
+exec --no-startup-id copyq 
+exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
+exec --no-startup-id xfce4-clipman
+exec --no-startup-id caffeine
+
+
+# exec --no-startup-id remmina -i
+# exec --no-startup-id task-indicator
+# exec --no-startup-id xfce4-power-manage
+# exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
+
+exec --no-startup-id /usr/bin/xrdb $HOME/.Xdefaults
+exec --no-startup-id /usr/lib/polkit-1/polkitd --no-debug
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+## Application Launchers
+bindsym $mod+Shift+p exec /usr/bin/xfce4-screenshooter
+
+## Layout Defaults
+### We don't need title bars
+# new_window 1pixel
+### Floating Popups
+# for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+### Floating Applications
+for_window [class="Steam" instance="Steam"] floating enable
+for_window [class="Pinta" instance="Pinta"] floating enable
+for_window [class="diceydungeons" instance="diceydungeons"] floating enable
+for_window [class="turtleworld" instance="TurtleWorld"] floating enable
+### Game overrides
+for_window [class="steam_app_1182480"] floating enable
+for_window [class="steam_app_1222680"] floating enable
+
+
+## Load Workspaces
+
+# exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/thorsten/.config/i3/workspace-dev-stacked.json; workspace 1; append_layout /home/thorsten/.config/i3/workspace-foursplit-default.json'"
+
+### Default workspace
+# exec --no-startup-id "i3-msg 'workspace 1; append_layout $HOME/.config/i3/workspace-foursplit-default.json'"
+# exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/alacritty'
+# exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/alacritty'
+# exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/alacritty'
+# exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/alacritty'
+
+### Dev Workspace
+# exec --no-startup-id i3-msg 'workspace 2; exec alacritty --working-directory $HOME/src -t vim -e /usr/bin/vim'
+# exec --no-startup-id i3-msg 'workspace 2; exec alacritty --working-directory $HOME/src -t Run'
+# exec --no-startup-id i3-msg 'workspace 2; exec firefox-developer-edition'
+
+# exec --no-startup-id i3-msg 'workspace 1;'
+
+### Dev Workspace
+# exec --no-startup-id $HOME/bin/devws-startup 
+
+### Defaut Workspace
+# exec --no-startup-id $HOME/bin/dws-startup
 

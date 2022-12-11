@@ -162,7 +162,7 @@ if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]]; then
   update_terminalapp_cwd
 fi
 
-
-eval "$(starship init zsh)"
-
 source $HOME/.config/broot/launcher/bash/br
+eval "$(thefuck --alias)"
+eval "$(starship init zsh)"
+eval "$(mcfly init zsh)"

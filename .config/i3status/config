@@ -1,0 +1,36 @@
+# ß
+
+general {
+        colors = true
+        interval = 5
+}
+
+order += "disk /"
+order += "cpu_temperature 0"
+order += "memory"
+order += "load"
+order += "tztime local"
+
+memory {
+        format = "%used"
+        threshold_degraded = "10%"
+        format_degraded = " %free"
+}
+
+tztime local {
+        format = "  %Y-%m-%d %H:%M:%S"
+}
+
+load {
+        format = "  %1min"
+}
+
+disk "/" {
+        format = "     %avail (%free) / %total"
+}
+
+cpu_temperature 0 {
+        format = "T: %degrees °C"
+        max_threshold = 85
+        path = "/sys/devices/platform/nct6775.2592/hwmon/hwmon?/temp7_input"
+}

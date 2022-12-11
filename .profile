@@ -1,5 +1,7 @@
 export CONFMAN=$HOME/src/configurations
 export DOTFILES=$CONFMAN/dotfiles.git
+export KBPATH=$HOME/Documents/notes/brain
+
 export EDITOR="nvim"
 export VISUAL="nvim"
 export HISTFILE="$ZDOTDIR/.zhistory"
@@ -26,7 +28,6 @@ export RUSTUP_HOME="$XDG_CONFIG_HOME/rustup"
 export GOPROXY="https://proxy.golang.org,direct"
 export GOPATH="$HOME/src/go"
 export GOPATHBIN="$GOPATH/bin"
-export GOBIN="$HOME/bin/go"
 export GOCACHE="$XDG_CACHE_HOME/go-build"
 
 export RANGER_LOAD_DEFAULT_RC=false
@@ -40,14 +41,12 @@ export STARSHIP_CACHE=$XDG_CACHE_HOME/starship
 
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$XDG_CONFIG_HOME/local/lib"
 
-export PATH=$HOME/bin:$HOME/.config/bin:$HOME/.local/bin:$HOME/.config/local/bin:$GOBIN:$GOPATHBIN:$RUSTBIN:$PATH
 
 export DEBUGINFOD_URLS="https://debuginfod.elfutils.org/"
 
-source $XDG_CONFIG_HOME/aliases
 
-
-
-# Added by Toolbox App
+export PATH=$PATH:$HOME/bin:$HOME/.config/bin:$HOME/.local/bin:$HOME/.config/local/bin:$GOBIN:$GOPATHBIN:$RUSTBIN
+# JB toolbox
 export PATH="$PATH:/home/sigugo/.config/local/share/JetBrains/Toolbox/scripts"
 
+source $XDG_CONFIG_HOME/aliases

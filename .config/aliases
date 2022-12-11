@@ -15,8 +15,11 @@ alias pacman='pacman $PACMAN_OPTIONS'
 alias update='yay -Syu'
 alias sshinsecure='ssh -oKexAlgorithms=+diffie-hellman-group1-sha1'
 
-## fix non XDG
-alias tmux='tmux -f "$TMUX_CONFIG_HOME/tmux.conf"'
+alias rg='rg -p'
+
+## fs-listers
+
+alias appimages='ranger $HOME/Downloads/appimage'
 
 ### helpers
 alias tstamp='date +%Y%m%d%H%M%S'
@@ -48,6 +51,7 @@ alias tssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChec
 alias trssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no root@localhost'
 alias tsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no kace_support@localhost -t -- screen -R'
 alias trsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no root@localhost -t -- screen -R'
+alias kacedocs='ranger $HOME/Documents/Text/Manuals/KACE'
 alias readdocs='ranger $HOME/Documents/Text/Manuals'
 alias iamgroot='cat $XDG_DOCUMENTS_DIR/notes/kace/KnowHow/iamgroot.md'
 
@@ -56,4 +60,4 @@ alias streamlink='streamlink -p mpv --twitch-disable-ads'
 alias jorbs='streamlink https://twitch.tv/joinrbs best'
 
 ### sumneko
-alias luamake='/home/thorsten/.config/cache/nvim/nlua/sumneko_lua/lua-language-server/3rd/luamake/luamake'
+alias luamake='$HOME/.config/cache/nvim/nlua/sumneko_lua/lua-language-server/3rd/luamake/luamake'

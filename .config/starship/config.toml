@@ -1,7 +1,7 @@
 # ~/.config/starship/config.toml
 
 add_newline = true
-command_timeout = 3000
+command_timeout = 300
 
 [hostname]
 ssh_only = true
@@ -9,6 +9,22 @@ format = "[$ssh_symbol](bold blue) on [$hostname](bold green) "
 trim_at = "."
 disabled = false
 
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind"
 
 [battery]
 full_symbol = ""
