@@ -1,5 +1,7 @@
 export CONFMAN=$HOME/src/configurations
 export DOTFILES=$CONFMAN/dotfiles.git
+export KBPATH=$HOME/Documents/notes/brain
+
 export EDITOR="nvim"
 export VISUAL="nvim"
 export HISTFILE="$ZDOTDIR/.zhistory"

@@ -14,6 +14,11 @@ alias paru='paru $PACMAN_OPTIONS'
 alias pacman='pacman $PACMAN_OPTIONS'
 alias update='yay -Syu'
 alias sshinsecure='ssh -oKexAlgorithms=+diffie-hellman-group1-sha1'
+alias rg='rg -p'
+
+## fs-listers
+
+alias appimages='ranger $HOME/Downloads/appimage'
 
 ## fix non XDG
 ## obsolete # alias tmux='tmux -f "$TMUX_CONFIG_HOME/tmux.conf"'
@@ -30,7 +35,7 @@ alias todo='/usr/bin/git --git-dir=$XDG_CONFIG_HOME/todo/ --work-tree=$HOME'
 alias update-todo='todo add $HOME/todo.md && todo commit -m "Update $(date +%Y-%m-%d.%H:%M:%S)" && todo push -u origin'
 
 ### manage wine
-alias wineprocs='ps auxwww | egrep -iE "wine|\.exe" | grep -v grep'
+alias wineprocs='ps auxwww | grep -iE "wine|\.exe" | grep -v grep'
 alias wineprocids='wineprocs | tr -s " " | cut -d" " -f 2'
 alias winekill='wineprocids | xargs kill -9 2>&1 > /dev/null || echo "No wine processes found"'
 alias wineterm='wineprocids | xargs kill -15 2>&1 > /dev/null || echo "No wine processes found"'
@@ -48,6 +53,7 @@ alias tssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChec
 alias trssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no root@localhost'
 alias tsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no kace_support@localhost -t -- screen -R'
 alias trsssh='/usr/bin/ssh-keygen -R localhost && /usr/bin/ssh -oStrictHostKeyChecking=no root@localhost -t -- screen -R'
+alias kacedocs='ranger $HOME/Documents/Text/Manuals/KACE'
 alias readdocs='ranger $HOME/Documents/Text/Manuals'
 alias iamgroot='cat $XDG_DOCUMENTS_DIR/notes/kace/KnowHow/iamgroot.md'
 
