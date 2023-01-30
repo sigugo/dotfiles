@@ -6,7 +6,7 @@ set $mod Mod4
 ## We don't need title bars
 # new_window 1pixel
 ## Handle some window roles as floating, like expected
-for_window [window_role="pop-up"] floating enable
+#for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 ### Special Windows
 for_window [class="Steam" instance="Steam"] floating enable
@@ -42,9 +42,9 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 ### Terminal
 bindsym $mod+Return exec i3-sensible-terminal
 ### Browser
-bindsym $mod+n exec firefox-developer-edition 
+bindsym $mod+Shift+n exec firefox-developer-edition 
 ### File Manager
-bindsym $mod+m exec thunar
+bindsym $mod+Shift+m exec thunar
 ##  Manage Windows and Containers
 ### kill focused window
 bindsym $mod+Shift+q kill
@@ -172,9 +172,9 @@ client.unfocused: #bfbfbf #162025 #bfbfbf #1c1b34 #100F45
 client.focused_inactive: #bfbfbf #162025 #bfbfbf #75404b #75404b
 client.urgent: #bfbfbf #162025 #bfbfbf #75404b #75404b
 client.placeholder: #bfbfbf #162025 #bfbfbf #75404b #75404b
-### Bar Toggle
-bindsym $mod+M bar mode toggle
 
+### Bar Toggle
+bindsym $mod+m bar mode toggle
 
 ## Autostart
 exec --no-startup-id nitrogen --restore
@@ -186,7 +186,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 exec --no-startup-id xfce4-clipman
 exec --no-startup-id caffeine
-
 
 # exec --no-startup-id remmina -i
 # exec --no-startup-id task-indicator
@@ -205,7 +204,7 @@ bindsym $mod+Shift+p exec /usr/bin/xfce4-screenshooter
 # new_window 1pixel
 ### Floating Popups
 # for_window [window_role="pop-up"] floating enable
-for_window [window_role="task_dialog"] floating enable
+# for_window [window_role="task_dialog"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 ### Floating Applications
 for_window [class="Steam" instance="Steam"] floating enable

@@ -23,6 +23,7 @@ alias appimages='ranger $HOME/Downloads/appimage'
 
 ### helpers
 alias tstamp='date +%Y%m%d%H%M%S'
+alias psearch='ps -ef | sed 1d|fzf -m|awk '{print $2}''
 
 ### git sync for dotfiles and todo
 alias dotfiles='/usr/bin/git --git-dir=$DOTFILES --work-tree=$HOME'

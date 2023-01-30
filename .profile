@@ -28,6 +28,7 @@ export RUSTUP_HOME="$XDG_CONFIG_HOME/rustup"
 export GOPROXY="https://proxy.golang.org,direct"
 export GOPATH="$HOME/src/go"
 export GOPATHBIN="$GOPATH/bin"
+export GOBIN="$HOME/bin/go"
 export GOCACHE="$XDG_CACHE_HOME/go-build"
 
 export RANGER_LOAD_DEFAULT_RC=false
@@ -50,3 +51,4 @@ export PATH=$PATH:$HOME/bin:$HOME/.config/bin:$HOME/.local/bin:$HOME/.config/loc
 export PATH="$PATH:/home/sigugo/.config/local/share/JetBrains/Toolbox/scripts"
 
 source $XDG_CONFIG_HOME/aliases
+source $XDG_CONFIG_HOME/secrets

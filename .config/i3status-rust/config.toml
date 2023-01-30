@@ -33,19 +33,19 @@ on_click = "nm-connection-editor"
 interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker\\d+"]
 interface_name_include = []
 
-[[block]]
-block = "xrandr"
-icons = true
-resolution = true
-interval = 2
+#[[block]]
+#block = "xrandr"
+#icons = true
+#resolution = true
+#interval = 
 
-[[block]]
-block = "battery"
-interval = 10
-format = "{percentage} {time}"
+#[[block]]
+#block = "battery"
+#interval = 10
+#format = "{percentage} {time}"
 
-[[block]]
-block = "backlight"
+#[[block]]
+#block = "backlight"
 
 [[block]]
 block = "sound"
@@ -55,8 +55,8 @@ block = "time"
 interval = 5
 format = "%a %Y-%m-%d %R"
 
-[[block]]
-block = "keyboard_layout"
-driver = "setxkbmap"
-interval = 15
+#[[block]]
+#block = "keyboard_layout"
+#driver = "setxkbmap"
+#interval = 15
 

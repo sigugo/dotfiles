@@ -60,6 +60,7 @@ Plug("nvim-treesitter/nvim-treesitter-context")
 Plug("neovim/nvim-lspconfig")
 Plug("nvim-lua/lsp_extensions.nvim")
 Plug("j-hui/fidget.nvim")
+Plug("williamboman/mason.nvim")
 -- Plug("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
 Plug("simrat39/inlay-hints.nvim")
 
@@ -137,6 +138,7 @@ require("nvim-web-devicons").setup({})
 require("fidget").setup({})
 require("which-key").setup({})
 require("todo-comments").setup({})
+require("mason").setup()
 
 -- -- Setup Scripts
 require("pcfg.gonvim")
