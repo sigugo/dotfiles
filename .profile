@@ -47,8 +47,6 @@ export DEBUGINFOD_URLS="https://debuginfod.elfutils.org/"
 
 
 export PATH=$PATH:$HOME/bin:$HOME/.config/bin:$HOME/.local/bin:$HOME/.config/local/bin:$GOBIN:$GOPATHBIN:$RUSTBIN
-# JB toolbox
-export PATH="$PATH:/home/sigugo/.config/local/share/JetBrains/Toolbox/scripts"
 
 source $XDG_CONFIG_HOME/aliases
 source $XDG_CONFIG_HOME/secrets
